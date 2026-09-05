@@ -15,7 +15,7 @@ export default function AboutInfinia() {
         <p>Experience a world where architecture becomes art and comfort becomes a way of life. Infinia sets a new benchmark for modern luxury in Amravati — an exceptional blend of style, space and prestige.</p>
         <p>Its striking façade, thoughtfully curated residences and attention to every detail create an address that reflects success and sophistication. This is more than a home — it is a statement of achievement.</p>
         <ul className="stat-row">
-          <li><strong>9</strong><span>Residences</span></li>
+          <li><strong>6</strong><span>Residences</span></li>
           <li><strong>G+6</strong><span>Structure</span></li>
           <li><strong>1375</strong><span>Sq.Ft. Each</span></li>
         </ul>
