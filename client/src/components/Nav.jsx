@@ -23,8 +23,8 @@ export default function Nav() {
     <header className={`nav${scrolled ? ' scrolled' : ''}`}>
       <div className="nav-inner">
         <a href="#top" className="nav-brand">
-          <img src="/assets/logo.jpeg" alt="Kurhe Estates" className="nav-logo" />
-          <span className="nav-brand-text">KURHE <em>ESTATES</em></span>
+          <img src="/assets/logo 2.jpeg" alt="Kurhe Estates" className="nav-logo" />
+          {/* <span className="nav-brand-text">KURHE <em>ESTATES</em></span> */}
         </a>
         <nav className={`nav-links${open ? ' open' : ''}`}>
           {LINKS.map(([href, label]) => (
