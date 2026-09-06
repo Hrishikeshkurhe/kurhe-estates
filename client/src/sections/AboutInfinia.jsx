@@ -17,7 +17,12 @@ export default function AboutInfinia() {
         <ul className="stat-row">
           <li><strong>6</strong><span>Residences</span></li>
           <li><strong>G+6</strong><span>Structure</span></li>
-          <li><strong>1375</strong><span>Sq.Ft. Each</span></li>
+          <li><strong>1375</strong><span>Sq.ft Super Built-Up Area</span></li>
+        </ul>
+         <ul className="stat-row">
+          <li><strong>1 Floor = 1 Flat</strong><span>Concept</span></li>
+          <li><strong>3BHK</strong><span>Luxorious Flats</span></li>
+          
         </ul>
       </div>
     </section>

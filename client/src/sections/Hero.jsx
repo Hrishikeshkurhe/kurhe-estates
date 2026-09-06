@@ -55,7 +55,7 @@ export default function Hero() {
       <div className="hero-content">
 
         <p className="eyebrow">
-          Kurhe Estates presents
+          A Leading Real Estate Company in Vidarbha
         </p>
 
         <h1 className="hero-title">
@@ -73,13 +73,16 @@ export default function Hero() {
         </h1>
 
         <p className="hero-desc">
+          Crafting landmarks. Creating legacies.
+          <br />
           A boutique address of nine 3&nbsp;BHK residences in Amravati —
-          Vastu-aligned, quietly monumental, built for a single generation
+          Vastu-aligned, thoughtfully designed, and built for generations
           to call home.
         </p>
 
         <div className="hero-actions">
 
+          {/* Book Site Visit */}
           <a
             href="#contact"
             className="btn btn-solid"
@@ -87,46 +90,20 @@ export default function Hero() {
             Book a Site Visit
           </a>
 
+
+          {/* Download Brochure */}
           <a
-            href="#infinia"
+            href="/assets/Infinia-Brochure.pdf"
             className="btn btn-ghost"
+            download="Infinia-Brochure.pdf"
           >
-            Explore Infinia ↓
+            Download Brochure ↓
           </a>
 
         </div>
 
       </div>
 
-
-      {/* Decorative Skyline */}
-      {/* <div
-        className="hero-skyline"
-        aria-hidden="true"
-      >
-
-        <svg
-          viewBox="0 0 400 160"
-          className="skyline-svg"
-        >
-
-          {SKYLINE.map((b, i) => (
-            <rect
-              key={i}
-              ref={(el) => {
-                barsRef.current[i] = el;
-              }}
-              className="skybar"
-              x={b.x}
-              y={160 - b.h}
-              width="18"
-              height={b.h}
-            />
-          ))}
-
-        </svg>
-
-      </div> */}
 
     </section>
   );
