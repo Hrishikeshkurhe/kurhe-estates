@@ -4,8 +4,22 @@ import { infinia } from '../data/infinia.js';
 
 export default function Credits() {
   const [ref, cls] = useReveal();
+
   return (
     <section className={`credits ${cls}`} ref={ref}>
+
+      {/* Centered Title */}
+      <div className="credits-heading">
+        <p className="eyebrow">Our Team</p>
+
+        <h2>
+          Meet the people
+          <br />
+          behind Infinia
+        </h2>
+      </div>
+
+      {/* Team Members */}
       <div className="credits-inner">
         {infinia.credits.map(([h, p]) => (
           <div className="credit" key={h}>
@@ -14,6 +28,7 @@ export default function Credits() {
           </div>
         ))}
       </div>
+
     </section>
   );
 }
