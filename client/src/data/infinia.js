@@ -33,8 +33,8 @@ export const infinia = {
     ['Sai Mandir', '2.3 km'], ['Rajapeth Bus Stand', '2.3 km'], ['Badnera Railway Station', '8.4 km'],
   ],
 credits: [
+  ['Founder', 'Rudresh Kurhe'],
   ['Architect / Engineer', 'Ar. Girish Nagpure'],
-  ['RCC Consultant', 'Pankaj Deshmukh'],
   ['Legal Advisor', 'Adv. Vaibhav Kakarde'],
   ['3D Rendering', 'V-Draw'],
   ['Banking Partners', 'HDFC Bank · Axis Bank · SBI Bank'],

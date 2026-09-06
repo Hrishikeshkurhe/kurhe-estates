@@ -18,7 +18,7 @@ export default function Residences() {
     <section className="section" id="residences">
       <div className={`section-head ${headClass}`} ref={headRef}>
         <p className="eyebrow">02 — The Residences</p>
-        <h2>Three bedrooms,<br />built on Vastu principles</h2>
+        <h2>Three bedrooms, built on Vastu principles</h2>
         <p className="section-lede">
           Every Infinia residence is oriented to the eight energies of Vastu Shastra — from the
           Ishanya puja corner to the Nairutya master retreat — so the plan supports the life
@@ -45,16 +45,24 @@ export default function Residences() {
           </div>
         ))}
       </div>
+<br></br>
+<br></br>
+     <div className="vastu-section">
+  <div className="vastu-heading">
+    <p className="eyebrow">Vastu Planning</p>
+    <h2>Designed in harmony with Vastu</h2>
+  </div>
 
-      <div className={`vastu-grid ${gridClass}`} ref={gridRef}>
-        {infinia.vastuZones.map((z) => (
-          <div className="vastu-card" key={z.name}>
-            <span className="vastu-dir">{z.dir}</span>
-            <h4>{z.name}</h4>
-            <p>{z.desc}</p>
-          </div>
-        ))}
+  <div className={`vastu-grid ${gridClass}`} ref={gridRef}>
+    {infinia.vastuZones.map((z) => (
+      <div className="vastu-card" key={z.name}>
+        <span className="vastu-dir">{z.dir}</span>
+        <h4>{z.name}</h4>
+        <p>{z.desc}</p>
       </div>
+    ))}
+  </div>
+</div>
 
       <div className={`dims ${dimsClass}`} ref={dimsRef}>
         {Object.entries(infinia.dims).map(([title, rows]) => (
