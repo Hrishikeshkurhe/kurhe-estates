@@ -75,7 +75,7 @@ export default function Hero() {
         <p className="hero-desc">
           Crafting landmarks. Creating legacies.
           <br />
-          A boutique address of nine 3&nbsp;BHK residences in Amravati —
+          A boutique address of nine 3&nbsp;BHK residences in Amravati -
           Vastu-aligned, thoughtfully designed, and built for generations
           to call home.
         </p>

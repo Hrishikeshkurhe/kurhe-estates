@@ -11,7 +11,7 @@ export default function Location() {
 
       <div className={`split-media ${mediaClass}`} ref={mediaRef}>
         <iframe
-          src="https://www.google.com/maps?q=Plot%20No.%208,%20Ganesh%20Vihar%20No.%202,%20Jagadare%20Layout,%20Amravati,%20Maharashtra%20444604&output=embed"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3727.0187697927463!2d77.74610009999999!3d20.9115645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd6a5003e9eb769%3A0x9c48bc46ab0a5c6f!2sINFINIA!5e0!3m2!1sen!2sin!4v1788694687431!5m2!1sen!2sin"
           title="Infinia Location, Amravati"
           loading="lazy"
           allowFullScreen
