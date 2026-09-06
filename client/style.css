@@ -107,41 +107,565 @@ button{font-family:var(--sans);cursor:pointer;}
 .nav-burger span{display:block;height:1px;background:var(--ivory);}
 
 /* ============ HERO ============ */
-.hero{
-  position:relative;
-  min-height:100vh;
-  display:flex;
-  align-items:flex-end;
-  overflow:hidden;
-  background:var(--ink);
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  position: relative;
+
+  width: 100%;
+  max-width: 100%;
+
+  min-height: 100vh;
+  min-height: 100svh;
+
+  display: flex;
+  align-items: flex-end;
+
+  overflow: hidden;
+
+  background: var(--ink);
+
+  isolation: isolate;
 }
-.hero-media{position:absolute;inset:0;}
-.hero-media img{width:100%;height:100%;object-fit:cover;object-position:top center;opacity:.9;}
-.hero-scrim{
-  position:absolute;inset:0;
-  background:linear-gradient(180deg, rgba(11,10,8,.55) 0%, rgba(11,10,8,.35) 40%, rgba(11,10,8,.96) 100%);
+
+
+/* =========================================================
+   HERO BACKGROUND
+========================================================= */
+
+.hero-media {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  /* overflow: hidden; */
+
+  z-index: 0;
+
+  background: var(--ink);
 }
-.hero-content{
-  position:relative; z-index:2;
-  max-width:1280px; margin:0 auto;
-  padding:0 32px 100px;
-  width:100%;
+
+
+/* Background image */
+
+.hero-background {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  max-width: none;
+
+  display: block;
+
+  object-fit: cover;
+
+  /*
+    Desktop position.
+    Adjust this only if you want to change
+    which part of the image is visible.
+  */
+  object-position: center center;
+
+  opacity: 0.9;
 }
-.hero-title{display:flex;flex-direction:column;gap:.15em;}
-.skyline-word{
-  font-size:clamp(3.2rem, 9vw, 7rem);
-  color:var(--gold-bright);
-  line-height:.95;
+
+
+/* =========================================================
+   DARK GRADIENT
+========================================================= */
+
+.hero-scrim {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(11, 10, 8, 0.55) 0%,
+      rgba(11, 10, 8, 0.35) 40%,
+      rgba(11, 10, 8, 0.96) 100%
+    );
 }
-.hero-sub{
-  font-family:var(--serif);
-  font-style:italic;
-  font-size:clamp(2.1rem, 2.4vw, 1.6rem);
-  color:var(--ivory);
-  font-weight:400;
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+  position: relative;
+
+  z-index: 3;
+
+  width: 100%;
+  max-width: 1280px;
+
+  margin: 0 auto;
+
+  padding:
+    0
+    32px
+    100px;
+
+  box-sizing: border-box;
 }
-.hero-desc{max-width:520px;font-size:1.02rem;margin-top:1.2em;}
-.hero-actions{display:flex;gap:16px;margin-top:1.6em;flex-wrap:wrap;}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.hero-title {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.15em;
+
+  margin: 0;
+
+  max-width: 700px;
+}
+
+
+/* Infinia */
+
+.skyline-word {
+  font-size: clamp(3.2rem, 9vw, 7rem);
+
+  color: var(--gold-bright);
+
+  line-height: 0.95;
+
+  white-space: nowrap;
+}
+
+
+/* Subtitle */
+
+.hero-sub {
+  font-family: var(--serif);
+
+  font-style: italic;
+
+  /*
+    Fixed the clamp order so the
+    font scales correctly.
+  */
+  font-size: clamp(1.6rem, 2.4vw, 2.1rem);
+
+  line-height: 1.25;
+
+  color: var(--ivory);
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.hero-desc {
+  width: 100%;
+
+  max-width: 520px;
+
+  font-size: 1.02rem;
+
+  line-height: 1.7;
+
+  margin-top: 1.2em;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.hero-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  margin-top: 1.6em;
+
+  flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   DECORATIVE SKYLINE
+========================================================= */
+
+.hero-skyline {
+  position: absolute;
+
+  right: 5%;
+  bottom: 0;
+
+  width: 340px;
+
+  max-width: 35vw;
+
+  z-index: 2;
+
+  opacity: 0.5;
+
+  pointer-events: none;
+}
+
+.skyline-svg {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+.skybar {
+  fill: none;
+
+  stroke: var(--gold);
+
+  stroke-width: 1;
+
+  opacity: 0.55;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .hero {
+    width: 100%;
+    max-width: 100%;
+
+    min-height: 100svh;
+
+    overflow: hidden;
+  }
+
+
+  /* Background */
+
+  .hero-media {
+    width: 100%;
+    height: 100%;
+
+    inset: 0;
+  }
+
+  .hero-background {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    /*
+      Keeps the main subject visible
+      on narrower screens.
+    */
+    object-position: 60% center;
+  }
+
+
+  /* Content */
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+
+    padding:
+      0
+      28px
+      70px;
+  }
+
+
+  .skyline-word {
+    font-size: clamp(3.5rem, 12vw, 6rem);
+  }
+
+
+  .hero-sub {
+    font-size: clamp(1.6rem, 4vw, 2.1rem);
+  }
+
+
+  .hero-desc {
+    max-width: 520px;
+
+    font-size: 0.95rem;
+  }
+
+
+  /* Buttons */
+
+  .hero-actions {
+    gap: 12px;
+  }
+
+
+  /* Hide decorative skyline */
+
+  .hero-skyline {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 560px) {
+
+  .hero {
+    width: 100%;
+    max-width: 100%;
+
+    min-width: 0;
+
+    min-height: 100svh;
+
+    height: auto;
+
+    overflow: hidden;
+
+    align-items: flex-end;
+  }
+
+
+  /* Background */
+
+  .hero-media {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+  }
+
+
+  .hero-background {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: none;
+
+    display: block;
+
+    object-fit: cover;
+
+    /*
+      Mobile crop.
+      This prevents the image from
+      creating horizontal overflow.
+    */
+    object-position: 62% center;
+  }
+
+
+  /* Stronger mobile gradient */
+
+  .hero-scrim {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(11, 10, 8, 0.52) 0%,
+        rgba(11, 10, 8, 0.30) 30%,
+        rgba(11, 10, 8, 0.80) 58%,
+        rgba(11, 10, 8, 0.98) 100%
+      );
+  }
+
+
+  /* Content */
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+
+    min-width: 0;
+
+    margin: 0;
+
+    padding:
+      0
+      22px
+      52px;
+
+    box-sizing: border-box;
+  }
+
+
+  /* Eyebrow */
+
+  .hero-content .eyebrow {
+    margin-bottom: 0.9em;
+
+    font-size: 0.62rem;
+
+    letter-spacing: 0.2em;
+  }
+
+
+  /* Main title */
+
+  .hero-title {
+    width: 100%;
+    max-width: 100%;
+
+    min-width: 0;
+  }
+
+
+  .skyline-word {
+    font-size: clamp(3rem, 16vw, 4.8rem);
+
+    line-height: 0.95;
+
+    white-space: nowrap;
+  }
+
+
+  /* Subtitle */
+
+  .hero-sub {
+    font-size: clamp(1.35rem, 7vw, 1.8rem);
+
+    line-height: 1.25;
+  }
+
+
+  /* Description */
+
+  .hero-desc {
+    width: 100%;
+    max-width: 100%;
+
+    margin-top: 1.1em;
+
+    font-size: 0.88rem;
+
+    line-height: 1.65;
+  }
+
+
+  /* Buttons */
+
+  .hero-actions {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 10px;
+
+    margin-top: 1.4em;
+  }
+
+
+  .hero-actions .btn {
+    width: 100%;
+
+    max-width: 100%;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    padding:
+      14px
+      20px;
+  }
+
+
+  /* Hide skyline */
+
+  .hero-skyline {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .hero-content {
+    padding:
+      0
+      18px
+      42px;
+  }
+
+
+  .hero-background {
+    object-position: 62% center;
+  }
+
+
+  .skyline-word {
+    font-size: 2.8rem;
+  }
+
+
+  .hero-sub {
+    font-size: 1.25rem;
+  }
+
+
+  .hero-desc {
+    font-size: 0.82rem;
+
+    line-height: 1.6;
+  }
+
+
+  .hero-actions .btn {
+    font-size: 0.72rem;
+
+    padding:
+      13px
+      16px;
+  }
+}
 
 .btn{
   display:inline-block;
