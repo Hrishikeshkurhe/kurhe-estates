@@ -14,7 +14,7 @@ export default function Credits() {
 
         <h2>
           Meet the people
-          <br />
+      
           behind Infinia
         </h2>
       </div>

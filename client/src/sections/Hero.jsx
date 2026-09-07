@@ -54,9 +54,9 @@ export default function Hero() {
       {/* Hero Content */}
       <div className="hero-content">
 
-        <p className="eyebrow">
+        <h3 >
           A Leading Real Estate Company in Vidarbha
-        </p>
+        </h3>
 
         <h1 className="hero-title">
 
