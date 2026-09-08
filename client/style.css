@@ -31,7 +31,7 @@ body{
 img{max-width:100%;display:block;}
 a{color:inherit;text-decoration:none;}
 h1,h2,h3,h4,h5{font-family:var(--serif);font-weight:500;margin:0 0 .5em;color:var(--ivory);letter-spacing:.01em;}
-p{margin:0 0 1em;color:var(--stone);}
+p{margin:0 0 1em;color:var(--stone); font-size: 1.22rem;}
 .eyebrow{
   font-family:var(--mono);
   font-size:.72rem;
@@ -352,89 +352,6 @@ button{font-family:var(--sans);cursor:pointer;}
 }
 
 
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 900px) {
-
-  .hero {
-    width: 100%;
-    max-width: 100%;
-
-    min-height: 100svh;
-
-    overflow: hidden;
-  }
-
-
-  /* Background */
-
-  .hero-media {
-    width: 100%;
-    height: 100%;
-
-    inset: 0;
-  }
-
-  .hero-background {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    /*
-      Keeps the main subject visible
-      on narrower screens.
-    */
-    object-position: 60% center;
-  }
-
-
-  /* Content */
-
-  .hero-content {
-    width: 100%;
-    max-width: 100%;
-
-    padding:
-      0
-      28px
-      70px;
-  }
-
-
-  .skyline-word {
-    font-size: clamp(3.5rem, 12vw, 6rem);
-  }
-
-
-  .hero-sub {
-    font-size: clamp(1.6rem, 4vw, 2.1rem);
-  }
-
-
-  .hero-desc {
-    max-width: 520px;
-
-    font-size: 0.95rem;
-  }
-
-
-  /* Buttons */
-
-  .hero-actions {
-    gap: 12px;
-  }
-
-
-  /* Hide decorative skyline */
-
-  .hero-skyline {
-    display: none;
-  }
-}
-
 
 /* =========================================================
    MOBILE
@@ -622,51 +539,6 @@ button{font-family:var(--sans);cursor:pointer;}
 }
 
 
-/* =========================================================
-   VERY SMALL PHONES
-========================================================= */
-
-@media (max-width: 360px) {
-
-  .hero-content {
-    padding:
-      0
-      18px
-      42px;
-  }
-
-
-  .hero-background {
-    object-position: 62% center;
-  }
-
-
-  .skyline-word {
-    font-size: 2.8rem;
-  }
-
-
-  .hero-sub {
-    font-size: 1.25rem;
-  }
-
-
-  .hero-desc {
-    font-size: 0.82rem;
-
-    line-height: 1.6;
-  }
-
-
-  .hero-actions .btn {
-    font-size: 0.72rem;
-
-    padding:
-      13px
-      16px;
-  }
-}
-
 .btn{
   display:inline-block;
   padding:15px 30px;
@@ -747,15 +619,6 @@ button{font-family:var(--sans);cursor:pointer;}
     display: block; width: 100%; font-size: 0.55rem; line-height: 1.4; letter-spacing: 0.06em; text-transform: uppercase; white-space: normal;}
 }
 
-
-   /* VERY SMALL PHONE — 320px */
-
-@media (max-width: 360px) {
-
-  .stat-row li + li {margin-left: 8px;}
-  .stat-row strong {font-size: 1.4rem;}
-  .stat-row span {font-size: 0.5rem; letter-spacing: 0.03em;line-height: 1.35;}
-}
 .stat-row span{font-family:var(--mono);font-size:.88rem;letter-spacing:.12em;text-transform:uppercase;color:var(--stone);margin-top:.3em;}
 
 /* ============ GENERIC SECTION ============ */
@@ -857,13 +720,49 @@ button{font-family:var(--sans);cursor:pointer;}
 .spec-card p{font-size:1.16rem;margin:0;}
 
 /* ============ AMENITIES ============ */
-.amen-list{display:grid;grid-template-columns:1fr 1fr;padding:80px 64px;gap:0;background:transparent;align-content:center;}
-.amen-item{
-  display:flex;align-items:baseline;gap:14px;
-  padding:16px 0;border-bottom:1px solid var(--hairline);
-  font-size:.95rem;color:var(--ivory);
+.amen-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  padding: 55px 64px;
+  gap: 0 32px;
+  background: transparent;
+  align-content: stretch;
+  min-height: 100%;
+  box-sizing: border-box;
 }
-.amen-item span{font-family:var(--mono);color:var(--copper);font-size:.75rem;}
+
+.amen-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--hairline);
+  font-size: .95rem;
+  line-height: 1.4;
+  color: var(--ivory);
+  min-width: 0;
+}
+
+.amen-item span {
+  flex: 0 0 auto;
+  font-family: var(--mono);
+  color: var(--copper);
+  font-size: .68rem;
+  letter-spacing: .04em;
+}
+
+.amen-item {
+  overflow-wrap: anywhere;
+}
+.split:has(.amen-list) {
+  align-items: stretch;
+}
+
+.split:has(.amen-list) .split-media,
+.split:has(.amen-list) .amen-list {
+  min-height: 100%;
+}
 
 /* ============ LOCATION ============ */
 .connect-list{margin-top:1.6em;border-top:1px solid var(--hairline);}

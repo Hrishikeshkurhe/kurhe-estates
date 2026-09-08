@@ -7,10 +7,11 @@ export default function Amenities() {
   const [rowRef, rowClass] = useReveal();
   return (
     <section className="section dark" id="amenities">
-      <div className={`section-head ${headClass}`} ref={headRef}>
+      <center><div className={`section-head ${headClass}`} ref={headRef}>
         <p className="eyebrow">04 — Amenities</p>
         <h2>Everyday, elevated</h2>
-      </div>
+      </div></center>
+      <br></br>
       <div className={`split ${rowClass}`} ref={rowRef}>
         <div className="split-media">
           <img src="/assets/amenities.jpg" alt="Infinia amenities — modular kitchen, CCTV, smart lighting" />

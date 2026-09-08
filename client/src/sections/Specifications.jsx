@@ -15,7 +15,13 @@ export default function Specifications() {
       </section>
 
       <section className="section" id="specifications">
+           <div className="vastu-heading">
+    
+    <h2>Specifications</h2>
+  </div>
+         <br></br>
         <div className="specs-grid">
+         
           {infinia.specs.map((s) => (
             <div className="spec-card" key={s.h}>
               <h4>{s.h}</h4>

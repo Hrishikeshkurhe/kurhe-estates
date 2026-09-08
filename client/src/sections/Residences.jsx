@@ -18,7 +18,7 @@ export default function Residences() {
     <section className="section" id="residences">
       <div className={`section-head ${headClass}`} ref={headRef}>
         <p className="eyebrow">02 — The Residences</p>
-        <h2>Three bedrooms, built on Vastu principles</h2>
+        <h2>Where Energy Meets Design, built on Vastu principles</h2>
         <p className="section-lede">
           Every Infinia residence is oriented to the eight energies of Vastu Shastra — from the
           Ishanya puja corner to the Nairutya master retreat — so the plan supports the life
