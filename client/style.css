@@ -227,6 +227,46 @@ button{font-family:var(--sans);cursor:pointer;}
   box-sizing: border-box;
 }
 
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin-top: 1.8em;
+  border-top: 1px solid var(--hairline);
+}
+
+.stat-item {
+  min-width: 0;
+  padding: 28px 20px 26px 0;
+  border-bottom: 1px solid var(--hairline);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stat-item:not(:nth-child(3n + 1)) {
+  padding-left: 25px;
+}
+
+.stat-item strong {
+  font-family: var(--serif);
+  font-size: 1.7rem;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--gold-bright);
+  margin-bottom: 8px;
+  white-space: nowrap;
+}
+
+.stat-item span {
+  font-family: var(--mono);
+  font-size: .58rem;
+  line-height: 1.5;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+
 
 /* =========================================================
    TITLE

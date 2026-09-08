@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-inner">
         <div className="footer-brand">
-          <img src="/assets/logo 2.jpeg" alt="Kurhe Estates" />
+          <img src="/assets/logo4.png" alt="Kurhe Estates" />
           {/* <p>KURHE ESTATES</p> */}
         </div>
         <p className="footer-disclaimer">
