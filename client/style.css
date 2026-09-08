@@ -260,7 +260,7 @@ button{font-family:var(--sans);cursor:pointer;}
 
 .stat-item span {
   font-family: var(--mono);
-  font-size: .58rem;
+  font-size: .78rem;
   line-height: 1.5;
   letter-spacing: .14em;
   text-transform: uppercase;
