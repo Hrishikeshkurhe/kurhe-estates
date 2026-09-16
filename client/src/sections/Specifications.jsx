@@ -6,13 +6,13 @@ export default function Specifications() {
   const [bannerRef, bannerClass] = useReveal();
   return (
     <>
-      <section className="banner">
+      {/* <section className="banner">
         <img src="/assets/living-room.jpg" alt="Infinia living room specification" />
         <div className={`banner-text ${bannerClass}`} ref={bannerRef}>
           <p className="eyebrow">03 — Specifications</p>
           <h2>Detail is the<br />real luxury</h2>
         </div>
-      </section>
+      </section> */}
 
       <section className="section" id="specifications">
            <div className="vastu-heading">

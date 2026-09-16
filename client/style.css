@@ -267,6 +267,69 @@ button{font-family:var(--sans);cursor:pointer;}
   color: var(--stone);
 }
 
+/* =============================
+MOBILE 
+=========================*/
+@media (max-width: 900px) {
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-item {
+    padding: 24px 15px 24px 0;
+  }
+
+  .stat-item:not(:nth-child(3n + 1)) {
+    padding-left: 0;
+  }
+
+  .stat-item:nth-child(even) {
+    padding-left: 20px;
+  }
+
+  .stat-item strong {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .stat-grid {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+
+  .stat-item {
+    padding: 22px 8px 22px 0;
+  }
+
+  .stat-item:nth-child(even) {
+    padding-left: 12px;
+  }
+
+  .stat-item strong {
+    font-size: 1.3rem;
+    white-space: normal;
+    line-height: 1.25;
+  }
+
+  .stat-item span {
+    font-size: .52rem;
+    letter-spacing: .08em;
+    line-height: 1.4;
+  }
+
+  /* Make the long concept item span the full width */
+  .stat-item:nth-child(4) {
+    grid-column: 1 / -1;
+    padding-left: 0;
+  }
+
+  .stat-item:nth-child(5) {
+    grid-column: 1 / -1;
+    padding-left: 0;
+  }
+}
+
 
 /* =========================================================
    TITLE
@@ -662,28 +725,345 @@ button{font-family:var(--sans);cursor:pointer;}
 .stat-row span{font-family:var(--mono);font-size:.88rem;letter-spacing:.12em;text-transform:uppercase;color:var(--stone);margin-top:.3em;}
 
 /* ============ GENERIC SECTION ============ */
-.section{padding:120px 32px;max-width:1280px;margin:0 auto;}
+.section {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
 .section.dark{background:var(--panel);max-width:none;padding:120px 0;}
 .section.dark .section-head,
 .section.dark .split{max-width:1280px;margin:0 auto;}
 .section.dark .split{background:transparent;min-height:auto;}
 .section.dark .split-copy{background:transparent;padding:0 64px;}
-.section-head{max-width:640px;margin-bottom:64px;}
+.section-head {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto 64px;
+  padding: 0 32px;
+  box-sizing: border-box;
+}
 .section-head h2{font-size:clamp(1.86rem,3vw,2.6rem);}
 .section-lede{font-size:1.50rem;}
 
 /* ============ TABS (floor plans) ============ */
-.tabs{display:flex;gap:10px;margin-bottom:36px;flex-wrap:wrap;border-bottom:1px solid var(--hairline);}
-.tab-btn{
-  background:none;border:0;color:var(--stone);
-  padding:14px 4px;margin-right:26px;
-  font-size:.95rem;letter-spacing:.06em;
-  border-bottom:2px solid transparent;
-  transition:color .2s, border-color .2s;
+/* =========================================
+   RESIDENCE FLOOR PLANS
+========================================= */
+
+.residence-plans {
+  width: 100%;
+  max-width: none;
+  margin: 70px 0 0;
 }
-.tab-btn.active,.tab-btn:hover{color:var(--gold-bright);border-color:var(--gold);}
-.tab-panel{display:none;border:1px solid var(--hairline);}
-.tab-panel.active{display:block;}
+
+.residence-plan {
+  display: grid;
+  grid-template-columns: 1.08fr 1fr;
+  min-height: 620px;
+  border-top: 1px solid var(--hairline);
+}
+
+.residence-plan:last-child {
+  border-bottom: 1px solid var(--hairline);
+}
+
+/* =========================================
+   RESIDENCES SECTION HEADING
+========================================= */
+
+.residences-head {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px;
+
+  text-align: center;
+}
+
+.residences-head .eyebrow {
+  margin-bottom: 18px;
+}
+
+.residences-head h2 {
+  max-width: 850px;
+  margin: 0 auto;
+
+  font-family: var(--serif);
+  font-size: clamp(2.8rem, 5vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -.02em;
+
+  color: var(--ivory);
+}
+
+.residences-head h2 em {
+  font-style: italic;
+  color: var(--gold-bright);
+}
+
+.residences-head .section-lede {
+  max-width: 760px;
+  margin: 28px auto 0;
+
+  font-size: .95rem;
+  line-height: 1.8;
+  text-align: center;
+
+  color: var(--stone);
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.residence-plan-media {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  height: 700px;
+  min-height: 420px;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.residence-plan-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 560px) {
+
+  .residence-plans {
+    width: 100%;
+    margin-top: 45px;
+  }
+
+  .residence-plan,
+  .residence-plan.reverse {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    min-height: auto;
+  }
+
+  .residence-plan-media,
+  .residence-plan.reverse .residence-plan-media {
+    order: 1;
+
+    width: 100%;
+    height: 360px;
+    min-height: 360px;
+  }
+
+  .residence-plan-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .residence-plan-content,
+  .residence-plan.reverse .residence-plan-content {
+    order: 2;
+
+    width: 100%;
+    padding: 48px 22px;
+  }
+
+  .residence-plan-content .eyebrow {
+    margin-bottom: 12px;
+    font-size: .6rem;
+  }
+
+  .residence-plan-content h3 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 18px;
+  }
+
+  .residence-plan-description {
+    font-size: .87rem;
+    line-height: 1.7;
+    margin-bottom: 28px;
+  }
+
+  .residence-features li {
+    gap: 12px;
+    padding: 14px 0;
+  }
+
+  .residence-features li span {
+    font-size: .58rem;
+  }
+
+  .residence-features li p {
+    font-size: .78rem;
+  }
+
+  .vastu-section {
+    margin-top: 60px;
+  }
+
+  .vastu-heading {
+    margin-bottom: 35px;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .vastu-heading h2 {
+    font-size: 2rem;
+  }
+}
+
+
+/* =========================================
+   DETAILS
+========================================= */
+
+.residence-plan-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 70px 70px;
+
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.residence-plan-content .eyebrow {
+  margin-bottom: 18px;
+}
+
+.residence-plan-content h3 {
+  margin: 0 0 24px;
+
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 400;
+  line-height: 1.15;
+
+  color: var(--ivory);
+}
+
+.residence-plan-description {
+  max-width: 520px;
+
+  margin: 0 0 32px;
+
+  font-size: .95rem;
+  line-height: 1.8;
+
+  color: var(--ivory);
+  opacity: .72;
+}
+
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.residence-features {
+  width: 100%;
+  max-width: 520px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  border-top: 1px solid var(--hairline);
+}
+
+.residence-features li {
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 15px 0;
+
+  border-bottom: 1px solid var(--hairline);
+}
+
+.residence-features li span {
+  flex: 0 0 auto;
+
+  font-family: var(--mono);
+  font-size: .62rem;
+  letter-spacing: .08em;
+
+  color: var(--copper);
+}
+
+.residence-features li p {
+  margin: 0;
+
+  font-size: .82rem;
+  line-height: 1.5;
+
+  color: var(--ivory);
+  opacity: .82;
+}
+
+
+/* =========================================
+   ALTERNATE LAYOUT
+========================================= */
+
+.residence-plan.reverse {
+  grid-template-columns: 1fr 1.08fr;
+}
+
+.residence-plan.reverse .residence-plan-media {
+  order: 2;
+}
+
+.residence-plan.reverse .residence-plan-content {
+  order: 1;
+}
+
+
+/* =========================================
+   VASTU SECTION
+========================================= */
+
+.vastu-section {
+  width: 100%;
+  margin-top: 100px;
+}
+
+.vastu-heading {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto 50px;
+}
+
+.vastu-heading .eyebrow {
+  margin-bottom: 14px;
+}
+
+.vastu-heading h2 {
+  margin: 0;
+
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.15;
+  font-weight: 400;
+
+  color: var(--ivory);
+}
+
+.vastu-grid {
+  width: 100%;
+}
 
 .vastu-heading {
   width: 100%;
@@ -995,10 +1375,9 @@ button{font-family:var(--sans);cursor:pointer;}
 .footer{background:var(--ink);border-top:1px solid var(--hairline);padding:56px 32px 32px;}
 .footer-inner{max-width:1280px;margin:0 auto;text-align:center;}
 .footer-brand{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:24px;}
-.footer-brand img{width:250px;height:58px;border-radius:50%;object-fit:cover;}
+.footer-brand img{width:350px;height:78px;border-radius:50%;object-fit:cover;}
 .footer-brand p{margin:0;font-family:var(--serif);letter-spacing:.12em;color:var(--ivory);}
-.footer-disclaimer{max-width:720px;margin:0 auto 20px;font-size:.75rem;color:var(--stone);opacity:.7;}
-.footer-copy{font-size:.75rem;color:var(--stone);margin:0;}
+.footer-copy{font-size:1rem;color:var(--stone);margin:0;}
 
 /* ============ REVEAL ANIMATION ============ */
 .reveal, .reveal-left, .reveal-right{
@@ -1048,4 +1427,623 @@ button{font-family:var(--sans);cursor:pointer;}
   .section{padding:80px 22px;}
   .contact{padding:80px 22px;}
   .contact-form{padding:28px;}
+}
+
+
+/* =========================================================
+   FINAL TYPOGRAPHY + RESPONSIVE SYSTEM
+   Use these values consistently across the website.
+========================================================= */
+
+:root{
+  --text-body: .92rem;
+  --text-small: .78rem;
+  --text-label: .62rem;
+  --heading-xl: clamp(2.6rem, 5vw, 4.2rem);
+  --heading-lg: clamp(2.2rem, 4vw, 3.2rem);
+  --heading-md: clamp(1.7rem, 3vw, 2.35rem);
+  --heading-sm: 1.25rem;
+}
+
+/* Base typography */
+body{
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+p{
+  font-size: var(--text-body);
+  line-height: 1.75;
+  color: var(--stone);
+}
+
+h1,h2,h3,h4,h5{
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+h1{font-size:var(--heading-xl);}
+h2{font-size:var(--heading-lg);}
+h3{font-size:var(--heading-md);}
+h4{font-size:var(--heading-sm);}
+
+.eyebrow{
+  font-size: .62rem;
+  line-height: 1.4;
+  letter-spacing: .24em;
+  margin-bottom: 1.1rem;
+}
+
+/* Navigation */
+.nav-links{
+  font-size: 1.2rem;
+  letter-spacing: .04em;
+}
+
+.nav-brand-text{
+  font-size: 1.35rem;
+}
+
+/* Hero */
+.hero-sub{
+  font-size: clamp(1.45rem, 2.4vw, 2.05rem);
+  line-height: 1.25;
+}
+
+.hero-desc{
+  font-size: .92rem;
+  line-height: 1.75;
+}
+
+.btn{
+  font-size: .68rem;
+  letter-spacing: .14em;
+}
+
+/* Marquee */
+.marquee-track{
+  font-size: .66rem;
+}
+
+/* All normal section headings */
+.section-head h2{
+  font-size: var(--heading-lg);
+  line-height: 1.12;
+}
+
+.section-lede{
+  max-width: 780px;
+  font-size: .92rem;
+  line-height: 1.8;
+}
+
+/* Split sections */
+.split-copy h2{
+  font-size: var(--heading-lg);
+  line-height: 1.12;
+}
+
+.split-copy p{
+  max-width: 520px;
+  font-size: .92rem;
+  line-height: 1.8;
+}
+
+/* Infinia stats */
+.stat-item strong{
+  font-size: 1.65rem;
+  line-height: 1.15;
+  font-weight: 400;
+}
+
+.stat-item span,
+.stat-row span{
+  font-size: .62rem;
+  line-height: 1.5;
+  letter-spacing: .14em;
+}
+
+/* Residence heading */
+.residences-head{
+  max-width: 1000px;
+  padding: 0 32px;
+  text-align: center;
+}
+
+.residences-head h2{
+  max-width: 850px;
+  margin: 0 auto;
+  font-size: var(--heading-lg);
+  line-height: 1.12;
+}
+
+.residences-head .section-lede{
+  max-width: 760px;
+  margin: 24px auto 0;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* Residence plans */
+.residence-plan-content h3{
+  font-size: var(--heading-md);
+  line-height: 1.15;
+}
+
+.residence-plan-description{
+  font-size: 1.2rem;
+  line-height: 1.75;
+}
+
+.residence-features li p{
+  font-size: .78rem;
+  line-height: 1.5;
+}
+
+/* Vastu */
+.vastu-heading h2{
+  font-size: var(--heading-lg);
+  line-height: 1.12;
+}
+
+.vastu-card h4{
+  font-size: 1.95rem;
+  line-height: 1.2;
+}
+
+.vastu-card p{
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Dimensions */
+.dims h5{
+  font-size: 1.4rem;
+  letter-spacing: .12em;
+}
+
+.dims p{
+  font-size: .78rem;
+  line-height: 1.55;
+}
+
+/* Banner */
+.banner-text h2{
+  font-size: var(--heading-lg);
+  line-height: 1.12;
+}
+
+/* Specifications */
+.spec-card h4{
+  font-size: 1.95em;
+  line-height: 1.2;
+}
+
+.spec-card p{
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Amenities */
+.amen-item{
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.amen-item span{
+  font-size: .80rem;
+}
+
+/* Location */
+.connect-list li{
+  font-size: .82rem;
+  line-height: 1.5;
+}
+
+/* Credits */
+.credits-heading h2{
+  font-size: var(--heading-lg);
+  line-height: 1.12;
+}
+
+.credit h5{
+  font-size: .58rem;
+}
+
+.credit p{
+  font-size: .82rem;
+  line-height: 1.6;
+}
+
+/* Contact */
+.contact-copy h2{
+  font-size: var(--heading-lg);
+  line-height: 1.12;
+}
+
+.contact-detail span,
+.form-row label{
+  font-size: .62rem;
+}
+
+.contact-detail a{
+  font-size: .9rem;
+}
+
+.contact-detail p,
+.form-row input,
+.form-row textarea{
+  font-size: .85rem;
+  line-height: 1.6;
+}
+
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px){
+
+  .section-head{
+    margin-bottom: 48px;
+    padding: 0 28px;
+  }
+
+  .section-head h2,
+  .residences-head h2,
+  .vastu-heading h2,
+  .credits-heading h2,
+  .contact-copy h2,
+  .banner-text h2{
+    font-size: clamp(2rem, 5vw, 2.8rem);
+  }
+
+  .section-lede,
+  .residences-head .section-lede{
+    font-size: .88rem;
+    line-height: 1.75;
+  }
+
+  .split-copy{
+    padding: 60px 40px;
+  }
+
+  .residence-plan{
+    min-height: auto;
+  }
+
+  .residence-plan-content{
+    padding: 55px 45px;
+  }
+
+  .residence-plan-content h3{
+    font-size: 2.15rem;
+  }
+
+  .vastu-card h4{
+    font-size: 1.3rem;
+  }
+
+  .spec-card{
+    padding: 28px 22px;
+  }
+
+  .spec-card h4{
+    font-size: 1.25rem;
+  }
+
+  .spec-card p{
+    font-size: .78rem;
+  }
+
+  .amen-list{
+    padding: 45px 40px;
+  }
+
+  .amen-item{
+    font-size: .78rem;
+  }
+
+  .contact{
+    padding: 90px 28px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 560px){
+
+  body{
+    font-size: 15px;
+  }
+
+  p{
+    font-size: .84rem;
+    line-height: 1.7;
+  }
+
+  .eyebrow{
+    font-size: .56rem;
+    letter-spacing: .19em;
+    margin-bottom: .85rem;
+  }
+
+  /* Section spacing */
+  .section{
+    padding: 70px 22px;
+  }
+
+  .section.dark{
+    padding: 80px 0;
+  }
+
+  .section-head{
+    padding: 0;
+    margin-bottom: 40px;
+  }
+
+  .section-head h2,
+  .residences-head h2,
+  .vastu-heading h2,
+  .credits-heading h2,
+  .contact-copy h2,
+  .banner-text h2{
+    font-size: 2rem;
+    line-height: 1.15;
+  }
+
+  .section-lede,
+  .residences-head .section-lede{
+    font-size: .82rem;
+    line-height: 1.7;
+    margin-top: 18px;
+  }
+
+  /* Split */
+  .split-copy{
+    padding: 48px 22px;
+  }
+
+  .split-copy h2{
+    font-size: 2rem;
+  }
+
+  .split-copy p{
+    font-size: .84rem;
+    line-height: 1.7;
+  }
+
+  /* Stats */
+  .stat-grid{
+    margin-top: 1.4em;
+  }
+
+  .stat-item{
+    padding: 20px 8px 20px 0;
+  }
+
+  .stat-item strong{
+    font-size: 1.25rem;
+  }
+
+  .stat-item span,
+  .stat-row span{
+    font-size: .52rem;
+    letter-spacing: .07em;
+  }
+
+  /* Residence plans */
+  .residence-plans{
+    margin-top: 40px;
+  }
+
+  .residence-plan-content{
+    padding: 42px 22px;
+  }
+
+  .residence-plan-content h3{
+    font-size: 1.9rem;
+    line-height: 1.18;
+    margin-bottom: 16px;
+  }
+
+  .residence-plan-description{
+    font-size: .82rem;
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .residence-features li{
+    gap: 11px;
+    padding: 13px 0;
+  }
+
+  .residence-features li span{
+    font-size: .55rem;
+  }
+
+  .residence-features li p{
+    font-size: .74rem;
+    line-height: 1.45;
+  }
+
+  /* Vastu */
+  .vastu-section{
+    margin-top: 65px;
+  }
+
+  .vastu-heading{
+    margin-bottom: 34px;
+  }
+
+  .vastu-heading h2{
+    font-size: 2rem;
+  }
+
+  .vastu-grid{
+    margin-top: 35px;
+  }
+
+  .vastu-card{
+    padding: 26px 22px;
+  }
+
+  .vastu-card h4{
+    font-size: 1.3rem;
+  }
+
+  .vastu-card p{
+    font-size: .78rem;
+    line-height: 1.65;
+  }
+
+  /* Dimensions */
+  .dims{
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 45px;
+    padding-top: 28px;
+  }
+
+  .dims h5{
+    font-size: .58rem;
+  }
+
+  .dims p{
+    font-size: .74rem;
+  }
+
+  /* Specifications */
+  .specs-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .spec-card{
+    padding: 26px 22px;
+  }
+
+  .spec-card h4{
+    font-size: 1.25rem;
+  }
+
+  .spec-card p{
+    font-size: .78rem;
+    line-height: 1.65;
+  }
+
+  /* Amenities */
+  .amen-list{
+    grid-template-columns: 1fr;
+    padding: 42px 22px;
+  }
+
+  .amen-item{
+    font-size: .78rem;
+    padding: 15px 0;
+  }
+
+  /* Credits */
+  .credits{
+    padding: 60px 22px;
+  }
+
+  .credits-heading{
+    margin-bottom: 40px;
+  }
+
+  .credits-heading h2{
+    font-size: 2rem;
+  }
+
+  .credit p{
+    font-size: .82rem;
+  }
+
+  /* Contact */
+  .contact{
+    padding: 75px 22px;
+  }
+
+  .contact-inner{
+    gap: 42px;
+  }
+
+  .contact-form{
+    padding: 26px 20px;
+  }
+
+  .contact-detail a{
+    font-size: .86rem;
+  }
+
+  .contact-detail p,
+  .form-row input,
+  .form-row textarea{
+    font-size: .8rem;
+  }
+
+  /* Banner */
+  .banner{
+    height: 50vh;
+  }
+
+  .banner-text{
+    padding: 0 22px;
+  }
+
+  /* Navigation */
+  .nav-inner{
+    padding: 0 22px;
+  }
+
+  .nav-brand-text{
+    font-size: 1.15rem;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px){
+
+  .section{
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .section-head h2,
+  .residences-head h2,
+  .vastu-heading h2,
+  .credits-heading h2,
+  .contact-copy h2{
+    font-size: 1.8rem;
+  }
+
+  .residence-plan-content{
+    padding: 38px 18px;
+  }
+
+  .residence-plan-content h3{
+    font-size: 1.75rem;
+  }
+
+  .residence-plan-description{
+    font-size: .78rem;
+  }
+
+  .spec-card{
+    padding: 24px 18px;
+  }
+
+  .amen-list{
+    padding-left: 18px;
+    padding-right: 18px;
+  }
 }
