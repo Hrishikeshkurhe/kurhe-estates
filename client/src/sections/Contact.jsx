@@ -31,8 +31,7 @@ export default function Contact() {
           <p>Leave your details and our booking desk will call you back with availability, pricing and a private site-visit slot.</p>
           <div className="contact-detail"><span>Booking Contact</span><a href="tel:+917972383011">7972 383011</a></div>
           <div className="contact-detail"><span>Email</span><a href="mailto:kurheestates@gmail.com">kurheestates@gmail.com</a></div>
-          <div className="contact-detail"><span>Office</span><p>Rathi Nagar, Lane-2, Amravati</p></div>
-          <div className="contact-detail"><span>Site Address</span><p>Plot No. 8, Ganesh Vihar No. 2, Near Jagadare Layout, Amravati 444604</p></div>
+         
         </div>
         <form className={`contact-form ${formClass}`} ref={formRef} onSubmit={onSubmit}>
           <div className="form-row">

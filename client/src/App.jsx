@@ -11,11 +11,13 @@ import Amenities from './sections/Amenities.jsx';
 import Location from './sections/Location.jsx';
 import Credits from './sections/Credits.jsx';
 import Contact from './sections/Contact.jsx';
+import IntroVideo from './sections/IntroVideo.jsx';
 
 export default function App() {
   return (
     <>
       <ProgressMark />
+      <IntroVideo />
       <Nav />
       <main>
         <Hero />
