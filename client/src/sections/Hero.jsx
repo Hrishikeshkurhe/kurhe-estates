@@ -1,110 +1,125 @@
 import React, { useEffect, useRef } from 'react';
 
-const SKYLINE = [
-  { x: 10, y: 70, h: 90 },
-  { x: 40, y: 40, h: 120 },
-  { x: 70, y: 10, h: 150 },
-  { x: 100, y: 55, h: 105 },
-  { x: 130, y: 0, h: 160 },
-  { x: 160, y: 55, h: 105 },
-  { x: 190, y: 10, h: 150 },
-  { x: 220, y: 40, h: 120 },
-  { x: 250, y: 70, h: 90 },
-];
-
 export default function Hero() {
-  const barsRef = useRef([]);
+  const heroRef = useRef(null);
 
   useEffect(() => {
-    barsRef.current.forEach((bar, i) => {
-      if (!bar) return;
+    const hero = heroRef.current;
+    if (!hero) return;
 
-      const box = bar.getBBox();
-      const len = box.height * 2 + box.width * 2;
+    const handleMouseMove = (e) => {
+      const rect = hero.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
 
-      bar.style.strokeDasharray = len;
-      bar.style.strokeDashoffset = len;
+      hero.style.setProperty('--mouse-x', `${x * 12}px`);
+      hero.style.setProperty('--mouse-y', `${y * 8}px`);
+    };
 
-      bar.style.transition =
-        `stroke-dashoffset 1s ease ${i * 0.08}s`;
+    const handleMouseLeave = () => {
+      hero.style.setProperty('--mouse-x', '0px');
+      hero.style.setProperty('--mouse-y', '0px');
+    };
 
-      requestAnimationFrame(() => {
-        bar.style.strokeDashoffset = 0;
-      });
-    });
+    hero.addEventListener('mousemove', handleMouseMove);
+    hero.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => {
+      hero.removeEventListener('mousemove', handleMouseMove);
+      hero.removeEventListener('mouseleave', handleMouseLeave);
+    };
   }, []);
 
   return (
-    <section className="hero" id="top">
-
-      {/* Background Image */}
-      <div className="hero-media">
-
+    <section className="hero-modern" id="top" ref={heroRef}>
+      <div className="hero-modern-media">
         <img
           src="/assets/hero-cover.jpg"
-          alt="Infinia — the new standard of imperial living"
-          className="hero-background"
+          alt="Infinia — The New Standard of Imperial Living"
         />
-
-        <div className="hero-scrim"></div>
-
+        <div className="hero-modern-overlay"></div>
+        <div className="hero-modern-glow"></div>
       </div>
 
+      <div className="hero-grid"></div>
 
-      {/* Hero Content */}
-      <div className="hero-content">
+      <div className="hero-topline">
+        <span>KE / 01</span>
+        <span>AMRAVATI · MAHARASHTRA</span>
+      </div>
 
-        <h3 >
-          A Leading Real Estate Company in Vidarbha
-        </h3>
+      <div className="hero-vertical hero-vertical-left">
+        <span>ARCHITECTURE</span>
+        <i></i>
+        <span>RESIDENCES</span>
+      </div>
 
-        <h1 className="hero-title">
+      <div className="hero-vertical hero-vertical-right">
+        <span>VASTU ALIGNED</span>
+        <i></i>
+        <span>PRIVATE ADDRESS</span>
+      </div>
 
-          <span className="skyline-word">
-            Infinia
-          </span>
+      <div className="hero-modern-content">
+        <div className="hero-modern-kicker">
+          <span></span>
+          A Growing Real Estate Company in Vidarbha
+        </div>
+        
 
-          <span className="hero-sub">
-            The New Standard of
-            <br />
-            Imperial Living
-          </span>
+        <div className="hero-modern-title-wrap">
+          <span className="hero-index">01</span>
 
-        </h1>
+          <h1>
+            <span className="hero-infinia">INFINIA</span>
 
-        <p className="hero-desc">
-          Crafting landmarks. Creating legacies.
-          <br />
-          A boutique address of nine 3&nbsp;BHK residences in Amravati -
-          Vastu-aligned, thoughtfully designed, and built for generations
-          to call home.
-        </p>
-
-        <div className="hero-actions">
-
-          {/* Book Site Visit */}
-          <a
-            href="#contact"
-            className="btn btn-solid"
-          >
-            Book a Site Visit
-          </a>
-
-
-          {/* Download Brochure */}
-          <a
-            href="/assets/Infinia-Brochure.pdf"
-            className="btn btn-ghost"
-            download="Infinia-Brochure.pdf"
-          >
-            Download Brochure ↓
-          </a>
-
+            <span className="hero-standard">
+              The New Standard of
+              <em> Imperial Living</em>
+            </span>
+          </h1>
         </div>
 
+        <div className="hero-modern-bottom">
+          <div className="hero-modern-copy">
+            <p>
+              Crafting landmarks. Creating legacies.
+              A boutique address of SIX 3 BHK residences in Amravati —
+              Vastu-aligned, thoughtfully designed, and built for generations
+              to call home.
+            </p>
+          </div>
+
+          <div className="hero-modern-actions">
+            <a href="#contact" className="modern-hero-btn primary">
+              <span>Book a Site Visit</span>
+              <strong>↗</strong>
+            </a>
+
+            <a
+              href="/assets/Infinia-Brochure.pdf"
+              download="Infinia-Brochure.pdf"
+              className="modern-hero-btn secondary"
+            >
+              <span>View Brochure</span>
+              <strong>↓</strong>
+            </a>
+          </div>
+        </div>
       </div>
 
+      <div className="hero-project-mark">
+        <span>INFINIA</span>
+        <span>G+6 · 3 BHK</span>
+      </div>
 
+      <div className="hero-scroll-modern">
+        <span>SCROLL</span>
+        <i></i>
+      </div>
+
+      <div className="hero-corner hero-corner-tl"></div>
+      <div className="hero-corner hero-corner-br"></div>
     </section>
   );
 }
