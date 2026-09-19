@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react';
 const LINKS = [
   ['#infinia', 'Infinia'],
   ['#residences', 'Residences'],
-  ['#amenities', 'Amenities'],
   ['#specifications', 'Specifications'],
-  ['#location', 'Location'],
+  ['#amenities', 'Amenities'],
+    ['#location', 'Location'],
 ];
 
 export default function Nav() {
@@ -13,29 +13,96 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    document.addEventListener('scroll', onScroll, { passive: true });
+    const onScroll = () => {
+      setScrolled(window.scrollY > 40);
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
-    return () => document.removeEventListener('scroll', onScroll);
+
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+    };
   }, []);
 
+  // Prevent background scrolling when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : '';
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [open]);
+
   return (
-    <header className={`nav${scrolled ? ' scrolled' : ''}`}>
+    <header className={`nav${scrolled ? ' scrolled' : ''}${open ? ' menu-open' : ''}`}>
+
       <div className="nav-inner">
-        <a href="#top" className="nav-brand">
-          <img src="/assets/logo4.png" alt="Kurhe Estates" className="nav-logo" />
-          {/* <span className="nav-brand-text">KURHE <em>ESTATES</em></span> */}
+
+        {/* LOGO */}
+        <a
+          href="#top"
+          className="nav-brand"
+          onClick={() => setOpen(false)}
+        >
+          <img
+            src="/assets/logo4.png"
+            alt="Kurhe Estates"
+            className="nav-logo"
+          />
         </a>
+
+
+        {/* NAVIGATION */}
         <nav className={`nav-links${open ? ' open' : ''}`}>
-          {LINKS.map(([href, label]) => (
-            <a key={href} href={href} onClick={() => setOpen(false)}>{label}</a>
-          ))}
-          <a href="#contact" className="nav-cta" onClick={() => setOpen(false)}>Enquire</a>
+
+          <div className="nav-links-inner">
+
+            {LINKS.map(([href, label], index) => (
+              <a
+                key={href}
+                href={href}
+                onClick={() => setOpen(false)}
+                style={{ '--nav-index': index }}
+              >
+                <span className="nav-number">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+
+                <span className="nav-label">
+                  {label}
+                </span>
+              </a>
+            ))}
+
+            <a
+              href="#contact"
+              className="nav-cta"
+              onClick={() => setOpen(false)}
+            >
+              <span>Enquire</span>
+              <strong>↗</strong>
+            </a>
+
+          </div>
+
         </nav>
-        <button className="nav-burger" aria-label="Open menu" onClick={() => setOpen((o) => !o)}>
-          <span></span><span></span><span></span>
+
+
+        {/* MOBILE MENU BUTTON */}
+        <button
+          className={`nav-burger${open ? ' active' : ''}`}
+          aria-label={open ? 'Close menu' : 'Open menu'}
+          aria-expanded={open}
+          onClick={() => setOpen((value) => !value)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
+
       </div>
+
     </header>
   );
 }
