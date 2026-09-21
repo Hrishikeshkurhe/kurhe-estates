@@ -24,7 +24,7 @@ export default function App() {
         <Marquee />
         <AboutInfinia />
         <Residences />
-        <Specifications />
+        {/* <Specifications /> */}
         <Amenities />
         <Location />
         <Credits />

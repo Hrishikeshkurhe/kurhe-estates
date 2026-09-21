@@ -8,23 +8,29 @@ export default function Credits() {
   return (
     <section className={`credits ${cls}`} ref={ref}>
 
-      {/* Centered Title */}
-      <div className="credits-heading">
-        <p className="eyebrow">Our Team</p>
+      <div className="credits-header">
+        <div className="credits-heading">
+          <p className="eyebrow">05 — Our Team</p>
+          <h2>People <em>behind Infinia.</em></h2>
+        </div>
 
-        <h2>
-          Meet the people
-      
-          behind Infinia
-        </h2>
+       
       </div>
 
-      {/* Team Members */}
       <div className="credits-inner">
-        {infinia.credits.map(([h, p]) => (
+        {infinia.credits.map(([h, p], index) => (
           <div className="credit" key={h}>
-            <h5>{h}</h5>
-            <p>{p}</p>
+            <div className="credit-top">
+              <span>0{index + 1}</span>
+              <span>INFINIA</span>
+            </div>
+
+            <div className="credit-content">
+              <h5>{h}</h5>
+              <p>{p}</p>
+            </div>
+
+            <span className="credit-arrow">↗</span>
           </div>
         ))}
       </div>

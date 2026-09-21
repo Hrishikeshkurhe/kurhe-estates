@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const LINKS = [
   ['#infinia', 'Infinia'],
   ['#residences', 'Residences'],
-  ['#specifications', 'Specifications'],
+  // ['#specifications', 'Specifications'],
   ['#amenities', 'Amenities'],
     ['#location', 'Location'],
 ];

@@ -10,12 +10,13 @@ export default function Amenities() {
     <section className={`amenities ${headClass}`} id="amenities">
       <div className="amenities-heading" ref={headRef}>
         <p className="eyebrow">04 — Amenities</p>
-        <h2>Everyday, elevated</h2>
-        <span className="amenities-heading-line"></span>
-        <p className="amenities-intro">
-          Thoughtfully selected amenities designed to bring comfort, convenience
-          and refined living into every part of your everyday life.
-        </p>
+        {/* <h2>Everyday, elevated</h2> */}
+       <span className="amenities-heading-line"></span>
+
+<p className="amenities-intro">
+  Thoughtfully selected amenities for
+  <em> comfort, convenience and refined living.</em>
+</p>
       </div>
 
       <div className={`amenities-main ${rowClass}`} ref={rowRef}>

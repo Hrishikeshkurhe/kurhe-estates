@@ -26,7 +26,7 @@ export const infinia = {
   amenities: [
     'Modular Kitchen', 'CCTV Camera Coverage', 'Designer False Ceiling', 'Kitchen Chimney',
     'Smart Lights, Common Areas', 'RO Water Purifier', 'Jaquar Bathroom Fittings', 'Video Door Bell',
-    'UPVC Windows', 'Solar System, Common Area', 'Solar Courtyard', 'Decorated Lobbies',
+    'UPVC Windows', 'Solar System, Common Area', 'Solar Courtyard', 'Decorated Lobbies', '1 Flat on 1 Floor', 'Private Lobbies', "Parking "
   ],
   connectivity: [
     ['Delhi Public School', '400 m'], ['D-Mart', '2.2 km'], ['Tapadia Mall', '2.2 km'],
