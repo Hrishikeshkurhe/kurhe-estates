@@ -812,17 +812,21 @@ button{font-family:var(--sans);cursor:pointer;}
 }
 
 @media(max-width:520px){
-.credits{padding:45px 0}
-.credits-header{padding:0 18px 18px}
-.credits-heading{display:block}
-.credits-heading .eyebrow{margin-bottom:9px}
-.credits-heading h2{font-size:1.7rem}
-.credits-intro{font-size:.6rem}
-.credits-inner{grid-template-columns:1fr}
-.credit{height:125px;padding:16px 18px;border-right:0!important;border-left:0!important;border-top:1px solid var(--hairline)}
-.credit:first-child{border-top:0}
-.credit:nth-child(5){grid-column:auto}
-.credit-top{margin-bottom:27px}
+  .credits{padding:45px 0;text-align:center}
+  .credits-header{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 18px 18px;text-align:center}
+  .credits-heading{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;text-align:center}
+  .credits-heading .eyebrow{margin-bottom:9px;text-align:center}
+  .credits-heading h2{font-size:1.7rem;text-align:center}
+  .credits-intro{font-size:.6rem;text-align:center;margin:12px auto 0;max-width:320px}
+  .credits-inner{grid-template-columns:1fr;width:100%;text-align:center}
+  .credit{height:125px;padding:16px 18px;border-right:0!important;border-left:0!important;border-top:1px solid var(--hairline);text-align:center}
+  .credit:first-child{border-top:0}
+  .credit:nth-child(5){grid-column:auto}
+  .credit-top{margin-bottom:27px;justify-content:center;gap:30px}
+  .credit-content{display:flex;flex-direction:column;align-items:center;text-align:center}
+  .credit-content h3,.credit-content h5{margin-left:auto;margin-right:auto;text-align:center}
+  .credit-content p{text-align:center}
+  .credit-arrow{display:none}
 }
 /* ===================== CONTACT ===================== */
 .contact{position:relative;width:100%;min-height:680px;padding:30px 0;overflow:hidden;background:radial-gradient(circle at 15% 30%,rgba(184,147,92,.06),transparent 28%),radial-gradient(circle at 90% 80%,rgba(184,147,92,.04),transparent 30%),var(--ink);}
