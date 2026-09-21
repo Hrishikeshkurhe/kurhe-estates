@@ -65,10 +65,9 @@ export default function Contact() {
           ref={copyRef}
         >
           <div className="contact-intro">
-            <span className="contact-index">05</span>
-
+        
             <p className="eyebrow">
-              Private Enquiry
+            08 - Private Enquiry
             </p>
           </div>
 

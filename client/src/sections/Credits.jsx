@@ -10,7 +10,7 @@ export default function Credits() {
 
       <div className="credits-header">
         <div className="credits-heading">
-          <p className="eyebrow">05 — Our Team</p>
+          <p className="eyebrow">07 — Our Team</p>
           <h2>People <em>behind Infinia.</em></h2>
         </div>
 

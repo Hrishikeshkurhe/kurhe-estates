@@ -20,7 +20,7 @@ export default function Location() {
       </div>
 
       <div className={`split-copy ${copyClass}`} ref={copyRef}>
-        <p className="eyebrow">05 — Location</p>
+        <p className="eyebrow">06 — Location</p>
 
         <h2>
           Plot No. 8,
