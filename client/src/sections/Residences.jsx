@@ -40,6 +40,13 @@ export default function Residences() {
     media.style.setProperty('--zoom-y', `${y}%`);
   };
 
+  const handleMouseLeave = (e) => {
+    const media = e.currentTarget;
+
+    media.style.setProperty('--zoom-x', '50%');
+    media.style.setProperty('--zoom-y', '50%');
+  };
+  
 
   return (
     <section className="residences-section" id="residences">
