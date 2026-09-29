@@ -40,45 +40,6 @@ export default function Residences() {
     media.style.setProperty('--zoom-y', `${y}%`);
   };
 
-const handleTouchStart = (e) => {
-  const touch = e.touches[0];
-  e.currentTarget.dataset.touchX = touch.clientX;
-  e.currentTarget.dataset.touchY = touch.clientY;
-};
-
-const handleMouseLeave = (e) => {
-  const media = e.currentTarget;
-
-  media.style.setProperty('--zoom-x', '50%');
-  media.style.setProperty('--zoom-y', '50%');
-  media.classList.remove('is-zoomed');
-};
-const handleTouchEnd = (e) => {
-  const media = e.currentTarget;
-  const touch = e.changedTouches[0];
-  const startX = Number(media.dataset.touchX);
-  const startY = Number(media.dataset.touchY);
-
-  // Ignore scrolling or dragging gestures
-  if (Math.abs(touch.clientX - startX) > 12 || Math.abs(touch.clientY - startY) > 12) return;
-
-  // If already zoomed, tap again to reset
-  if (media.classList.contains('is-zoomed')) {
-    media.classList.remove('is-zoomed');
-    media.style.setProperty('--zoom-x', '50%');
-    media.style.setProperty('--zoom-y', '50%');
-    return;
-  }
-
-  // Zoom into the exact tapped position
-  const rect = media.getBoundingClientRect();
-  const x = ((touch.clientX - rect.left) / rect.width) * 100;
-  const y = ((touch.clientY - rect.top) / rect.height) * 100;
-
-  media.style.setProperty('--zoom-x', `${x}%`);
-  media.style.setProperty('--zoom-y', `${y}%`);
-  media.classList.add('is-zoomed');
-};
 
   return (
     <section className="residences-section" id="residences">
@@ -124,8 +85,6 @@ const handleTouchEnd = (e) => {
           className="residence-plan-media"
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
-           onTouchStart={handleTouchStart}
-  onTouchEnd={handleTouchEnd}
         >
           <div className="residence-plan-image">
             <img

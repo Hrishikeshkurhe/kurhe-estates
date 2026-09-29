@@ -409,8 +409,6 @@ button{font-family:var(--sans);cursor:pointer;}
 .dimension-group-head h4{margin:0;font-family:var(--mono);font-size:1rem;font-weight:400;letter-spacing:.11em;text-transform:uppercase;color:var(--ivory);}
 .dimension-values{display:flex;flex-direction:column;gap:6px;}
 .dimension-values p{margin:0;font-family:var(--sans);font-size:1rem;font-weight:500;line-height:1.45;color:var(--stone);}
-.residence-plan-image img{transform:scale(1);transform-origin:var(--zoom-x,50%) var(--zoom-y,50%);transition:transform .45s cubic-bezier(.2,.8,.2,1),filter .45s ease;will-change:transform;}
-.residence-plan-media:hover .residence-plan-image img{transform:scale(2.05);filter:brightness(1.04);}
 @media(hover:none) and (pointer:coarse){.residence-plan-media{cursor:pointer;touch-action:pan-y;}.residence-plan-media:hover .residence-plan-image img{transform:scale(1);filter:none;}.residence-plan-media.is-zoomed .residence-plan-image img{transform:scale(2.5);filter:brightness(1.04);}.residence-plan-media.is-zoomed{z-index:6;}}@media (max-width: 560px){
   .residence-plans{width:100%;margin-top:40px;}
   .residence-plan, .residence-plan.reverse{display:flex;flex-direction:column;width:100%;min-height:auto;}
