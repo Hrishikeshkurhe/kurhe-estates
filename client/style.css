@@ -861,14 +861,20 @@ button{font-family:var(--sans);cursor:pointer;}
 .contact-form{width:100%;}
 .contact-submit{position:relative;display:flex;align-items:center;justify-content:space-between;width:100%;margin-top:22px;padding:14px 17px;border:1px solid var(--gold);background:var(--gold);color:var(--ink);font-family:var(--mono);font-size:.58rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;overflow:hidden;transition:color .35s ease,border-color .35s ease,background .35s ease;}
 .contact-submit::before{content:"";position:absolute;inset:0;background:var(--ink);transform:translateX(-101%);transition:transform .45s cubic-bezier(.2,.8,.2,1);}
-.contact-submit span,.contact-submit strong{position:relative;z-index:1;}
+.contact-submit span,.contact-submit strong{position:relative;z-index:1; font-size: 0.70rem;}
 .contact-submit strong{font-size:.9rem;font-weight:400;transition:transform .35s ease;}
 .contact-submit:hover{color:var(--gold-bright);border-color:var(--gold-bright);}
 .contact-submit:hover::before{transform:translateX(0);}
 .contact-submit:hover strong{transform:translate(4px,-4px);}
-.contact-detail span, .form-row label{font-size:.62rem;}
+.contact-detail span, .form-row label{font-size:.72rem;}
 .contact-detail a{font-size:.9rem;}
 .contact-detail p, .form-row input, .form-row textarea{font-size:.85rem;line-height:1.6;}
+.luxury-field input[aria-invalid="true"],.luxury-field textarea[aria-invalid="true"]{border-bottom-color:#d97777}
+.field-invalid .field-meta label{color:#e19a9a}
+.field-error{display:block;margin-top:8px;font-family:var(--sans);font-size:.72rem;line-height:1.5;color:#e19a9a}
+.message-count{display:block;margin-top:6px;text-align:right;font-family:var(--mono);font-size:.55rem;color:var(--stone)}
+.form-note{margin:14px 0 0;font-family:var(--sans);font-size:.78rem;line-height:1.6;color:var(--gold-bright)}
+.luxury-field input:focus-visible,.luxury-field textarea:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
 @media(max-width:900px){
   .contact{min-height:auto;padding:75px 0;}
   .contact-inner{width:min(680px,calc(100% - 40px));grid-template-columns:1fr;gap:55px;}
