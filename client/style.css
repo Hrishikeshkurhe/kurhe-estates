@@ -245,7 +245,7 @@ button{font-family:var(--sans);cursor:pointer;}
   .hero-topline span:last-child{display:none;}
   .hero-corner-tl{top:75px;left:15px;width:28px;height:28px;}
   .hero-corner-br{right:15px;bottom:18px;width:28px;height:28px;}
-  .hero-modern-content{left:0;bottom:75px;width:100%;padding:0 22px;transform:none;box-sizing:border-box;}
+  .hero-modern-content{left:0;bottom:55px;width:100%;padding:0 22px;transform:none;box-sizing:border-box;}
   .hero-modern-kicker{gap:9px;margin-bottom:17px;font-size:.85rem;letter-spacing:.14em;}
   .hero-modern-kicker span{width:24px;}
   .hero-index{display:none;}
