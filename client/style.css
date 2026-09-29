@@ -344,6 +344,8 @@ button{font-family:var(--sans);cursor:pointer;}
 }
 
 /* ===================== RESIDENCES ===================== */
+
+/* RESIDENCES */
 .residence-plans{width:100%;max-width:none;margin:0;background:#090807;}
 .residence-plan{display:grid;grid-template-columns:1fr 1fr;min-height:620px;border-top:1px solid rgba(255,255,255,.08);width:100%;background:#090807;}
 .residence-plan:last-child{border-bottom:1px solid rgba(255,255,255,.08);}
@@ -351,20 +353,9 @@ button{font-family:var(--sans);cursor:pointer;}
 .residences-head .eyebrow{margin-bottom:18px;}
 .residences-head h2{font-family:var(--serif);font-weight:400;letter-spacing:-.02em;color:var(--ivory);max-width:850px;margin:0 auto;font-size:var(--heading-lg);line-height:1.12;}
 .residences-head h2 em{font-style:italic;color:var(--gold-bright);}
-.residences-head .section-lede{text-align:center;color:var(--stone);max-width:760px;margin:24px auto 0;font-size:1s.2rem;line-height:1.8;}
-.residence-plan-media{position:relative;width:100%;min-width:0;height:650px;min-height:420px;overflow:hidden;background:#090807;cursor:crosshair;--zoom-x:50%;--zoom-y:50%;}
-.residence-plan-media img{display:block;width:100%;height:100%;min-width:0;min-height:100%;object-fit:cover;}
-.residence-plan-content{display:flex;flex-direction:column;justify-content:center;padding:80px clamp(55px,6vw,105px);box-sizing:border-box;min-width:0;position:relative;background:#090807;overflow:hidden;}
-.residence-plan-content .eyebrow{margin-bottom:18px;}
-.residence-plan-content h3{margin:0;font-family:var(--serif);font-weight:400;color:var(--ivory);font-size:clamp(2.35rem,3.3vw,3.7rem);line-height:1.05;max-width:560px;letter-spacing:-.03em;}
-.residence-plan-description{max-width:520px;margin:0;font-family:var(--sans);font-size:1.2rem;font-weight:300;line-height:1.72;color:var(--ivory);}
-.residence-features{width:100%;max-width:520px;margin:0;padding:0;list-style:none;border-top:1px solid var(--hairline);}
-.residence-features li{display:flex;align-items:center;gap:16px;padding:15px 0;border-bottom:1px solid var(--hairline);}
-.residence-features li span{flex:0 0 auto;font-family:var(--mono);font-size:1rem;letter-spacing:.08em;color:var(--copper);}
-.residence-features li p{margin:0;color:var(--ivory);opacity:.82;font-size:.78rem;line-height:1.5;}
-.residence-plan.reverse{grid-template-columns:1fr 1fr;}
-.residence-plan.reverse .residence-plan-media{order:2;}
-.residence-plan.reverse .residence-plan-content{order:1;}
+.residences-head .section-lede{text-align:center;color:var(--stone);max-width:760px;margin:24px auto 0;font-size:1.2rem;line-height:1.8;}
+
+/* INTRO */
 .residences-section{width:100%;padding:60px 0 0;background:#090807;overflow:hidden;}
 .residences-intro{width:min(1240px,100%);margin:0 auto 75px;padding:0 42px;box-sizing:border-box;}
 .residences-intro-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:26px;}
@@ -375,6 +366,9 @@ button{font-family:var(--sans);cursor:pointer;}
 .residences-intro-bottom{display:flex;align-items:flex-start;gap:25px;max-width:780px;margin:30px 0 0 auto;}
 .residences-intro-line{width:60px;height:1px;margin-top:11px;flex:0 0 auto;background:var(--gold);}
 .residences-intro-bottom p{max-width:660px;margin:0;font-family:var(--sans);font-size:1rem;font-weight:300;line-height:1.8;color:var(--stone);}
+
+/* FLOOR PLAN IMAGE */
+.residence-plan-media{position:relative;width:100%;min-width:0;height:620px;min-height:420px;overflow:hidden;background:#090807;cursor:crosshair;--zoom-x:50%;--zoom-y:50%;}
 .residence-plan-image{position:absolute;inset:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#090807;}
 .residence-plan-image img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;transform:scale(1);transform-origin:var(--zoom-x) var(--zoom-y);transition:transform .5s cubic-bezier(.2,.8,.2,1),filter .5s ease;will-change:transform;}
 .residence-plan-media:hover .residence-plan-image img{transform:scale(2.05);filter:brightness(1.04);}
@@ -383,11 +377,25 @@ button{font-family:var(--sans);cursor:pointer;}
 .residence-media-top span:first-child{color:var(--gold);}
 .residence-media-bottom{position:absolute;left:30px;right:30px;bottom:25px;display:flex;justify-content:space-between;padding-top:13px;border-top:1px solid rgba(255,255,255,.18);font-family:var(--mono);font-size:.42rem;letter-spacing:.14em;color:var(--ivory);z-index:3;pointer-events:none;}
 .residence-media-bottom span:last-child{color:var(--gold);}
+.residence-media-frame{position:absolute;inset:18px;z-index:2;border:1px solid rgba(255,255,255,.12);pointer-events:none;transition:inset .35s ease,border-color .35s ease;}
 .residence-plan-media:hover .residence-media-frame{inset:27px;border-color:rgba(205,169,92,.55);}
 .residence-zoom-hint{position:absolute;right:30px;top:50%;z-index:5;display:flex;align-items:center;gap:9px;font-family:var(--mono);font-size:.4rem;letter-spacing:.13em;color:var(--ivory);opacity:0;transform:translateY(-50%) translateX(12px);transition:opacity .35s ease,transform .35s ease;pointer-events:none;}
 .residence-zoom-hint strong{font-size:.75rem;color:var(--gold);}
 .residence-plan-media:hover .residence-zoom-hint{opacity:.85;transform:translateY(-50%) translateX(0);}
+
+/* PLAN CONTENT */
+.residence-plan-content{display:flex;flex-direction:column;justify-content:center;padding:80px clamp(55px,6vw,105px);box-sizing:border-box;min-width:0;position:relative;background:#090807;overflow:hidden;}
 .residence-plan-content:before{content:"";position:absolute;top:0;left:0;width:1px;height:100%;background:linear-gradient(180deg,transparent,var(--gold),transparent);opacity:.25;}
+.residence-plan-content .eyebrow{margin-bottom:18px;}
+.residence-plan-content h3{margin:0;font-family:var(--serif);font-weight:400;color:var(--ivory);font-size:clamp(2.35rem,3.3vw,3.7rem);line-height:1.05;max-width:560px;letter-spacing:-.03em;}
+.residence-plan-description{max-width:520px;margin:0;font-family:var(--sans);font-size:1.2rem;font-weight:300;line-height:1.72;color:var(--ivory);}
+.residence-features{width:100%;max-width:520px;margin:0;padding:0;list-style:none;border-top:1px solid var(--hairline);}
+.residence-features li{display:flex;align-items:center;gap:16px;padding:15px 0;border-bottom:1px solid var(--hairline);}
+.residence-features li span{flex:0 0 auto;font-family:var(--mono);font-size:1rem;letter-spacing:.08em;color:var(--copper);}
+.residence-features li p{margin:0;color:var(--ivory);opacity:.82;font-size:.78rem;line-height:1.5;}
+.residence-plan.reverse{grid-template-columns:1fr 1fr;}
+.residence-plan.reverse .residence-plan-media{order:2;}
+.residence-plan.reverse .residence-plan-content{order:1;}
 .residence-content-number{position:absolute;top:30px;right:42px;font-family:var(--serif);font-size:6.5rem;font-weight:400;line-height:1;color:rgba(243,236,225,.035);letter-spacing:-.08em;transition:transform .5s ease,color .5s ease;}
 .residence-plan:hover .residence-content-number{color:rgba(205,169,92,.09);transform:translate(-7px,7px);}
 .residence-plan-label{margin:0 0 18px;font-family:var(--mono);font-size:1rem;letter-spacing:.17em;text-transform:uppercase;color:var(--gold);}
@@ -397,6 +405,8 @@ button{font-family:var(--sans);cursor:pointer;}
 .residence-plan-meta span:first-child{color:var(--gold);}
 .residence-content-arrow{position:absolute;right:42px;bottom:38px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.14);border-radius:50%;font-size:.8rem;color:var(--gold);opacity:.7;transition:background .3s ease,color .3s ease,transform .35s ease,opacity .3s ease;}
 .residence-plan:hover .residence-content-arrow{background:var(--gold);color:#090807;transform:rotate(45deg);opacity:1;}
+
+/* DIMENSIONS */
 .residence-dimensions{display:grid;grid-template-columns:280px 1fr;gap:55px;width:min(1480px,100%);margin:0 auto;padding:60px 26px 2px;box-sizing:border-box;}
 .dimensions-heading{padding-top:5px;}
 .dimensions-heading .eyebrow{margin:0 0 14px;}
@@ -409,112 +419,66 @@ button{font-family:var(--sans);cursor:pointer;}
 .dimension-group-head h4{margin:0;font-family:var(--mono);font-size:1rem;font-weight:400;letter-spacing:.11em;text-transform:uppercase;color:var(--ivory);}
 .dimension-values{display:flex;flex-direction:column;gap:6px;}
 .dimension-values p{margin:0;font-family:var(--sans);font-size:1rem;font-weight:500;line-height:1.45;color:var(--stone);}
-@media(hover:none) and (pointer:coarse){.residence-plan-media{cursor:pointer;touch-action:pan-y;}.residence-plan-media:hover .residence-plan-image img{transform:scale(1);filter:none;}.residence-plan-media.is-zoomed .residence-plan-image img{transform:scale(2.5);filter:brightness(1.04);}.residence-plan-media.is-zoomed{z-index:6;}}@media (max-width: 560px){
-  .residence-plans{width:100%;margin-top:40px;}
-  .residence-plan, .residence-plan.reverse{display:flex;flex-direction:column;width:100%;min-height:auto;}
-  .residence-plan-media, .residence-plan.reverse .residence-plan-media{order:1;width:100%;height:360px;min-height:360px;}
-  .residence-plan-media img{width:100%;height:100%;object-fit:cover;}
-  .residence-plan-content, .residence-plan.reverse .residence-plan-content{order:2;width:100%;padding:48px 22px;}
-  .residence-plan-content .eyebrow{margin-bottom:12px;font-size:.6rem;}
-  .residence-plan-content h3{font-size:1.9rem;line-height:1.18;margin-bottom:16px;}
-  .residence-plan-description{font-size:.82rem;line-height:1.7;margin-bottom:24px;}
-  .residence-features li{gap:11px;padding:13px 0;}
-  .residence-features li span{font-size:.55rem;}
-  .residence-features li p{font-size:.74rem;line-height:1.45;}
-  .residence-plan-content{padding:42px 22px;}
-}
-@media (max-width: 900px){
-  .residence-plan{min-height:auto;}
-  .residence-plan-content{padding:55px 45px;}
-  .residence-plan-content h3{font-size:2.15rem;}
-}
-@media (max-width: 360px){
-  .residence-plan-content{padding:38px 18px;}
-  .residence-plan-content h3{font-size:1.75rem;}
-  .residence-plan-description{font-size:.78rem;}
-}
+
+/* TABLET */
 @media(max-width:1000px){
   .residences-intro{padding:0 28px;}
   .residences-intro h2{font-size:clamp(2.5rem,4.5vw,3.2rem);}
   .residence-plan,.residence-plan.reverse{grid-template-columns:1fr 1fr;}
-  .residence-plan-media{height:500px;}
+  .residence-plan-media{height:500px;min-height:420px;}
   .residence-plan-content{padding:50px 40px;}
   .residence-plan-content h3{font-size:2.6rem;}
-  .residence-plan-description{font-size:.84rem;}
+  .residence-plan-description{font-size:.95rem;}
   .residence-content-number{font-size:4.5rem;}
   .residence-dimensions{grid-template-columns:220px 1fr;gap:35px;padding-left:28px;padding-right:28px;}
 }
+
+/* MOBILE: IMAGE ONLY */
 @media(max-width:700px){
-  .residences-section{padding:75px 0 0;padding-top:70px;}
-  .residences-intro{margin-bottom:50px;padding:0 20px;}
+  .residences-section{padding:70px 0 0;}
+  .residences-intro{margin-bottom:40px;padding:0 20px;}
   .residences-intro-top{margin-bottom:18px;}
   .residences-intro-index{display:none;}
-  .residences-intro h2{font-size:2.35rem;line-height:1.06;}
+  .residences-intro h2{font-size:2.2rem;line-height:1.06;white-space:normal;}
   .residences-intro-bottom{gap:14px;margin-top:21px;}
   .residences-intro-line{width:32px;margin-top:9px;}
-  .residences-intro-bottom p{font-size:.72rem;line-height:1.7;}
-  .residence-plan,.residence-plan.reverse{display:flex;flex-direction:column;min-height:0;}
-  .residence-plan.reverse .residence-plan-media,.residence-plan.reverse .residence-plan-content{order:initial;}
-  .residence-plan-media{height:350px;min-height:350px;cursor:default;}
-  .residence-plan-image{padding:15px;}
-  .residence-plan-image img{transform:scale(1);}
-  .residence-plan-media:hover .residence-plan-image img{transform:scale(1);}
-  .residence-media-top{top:18px;left:18px;right:18px;}
-  .residence-media-bottom{left:18px;right:18px;bottom:18px;}
-  .residence-media-frame{inset:12px;}
-  .residence-plan-content{min-height:340px;padding:48px 20px;}
-  .residence-content-number{top:22px;right:20px;font-size:4rem;}
-  .residence-plan-label{font-size:.46rem;margin-bottom:14px;}
-  .residence-plan-content h3{max-width:90%;font-size:2rem;}
-  .residence-content-line{margin:18px 0 17px;}
-  .residence-plan-description{font-size:.72rem;line-height:1.75;}
-  .residence-plan-meta{margin-top:25px;font-size:.38rem;}
-  .residence-content-arrow{right:20px;bottom:22px;width:32px;height:32px;font-size:.7rem;}
-  .residence-zoom-hint{display:none;}
-  .residence-plan:hover .residence-media-frame{inset:16px;}
-  .residence-dimensions{display:block;margin:0;padding:65px 20px 70px;}
-  .dimensions-heading{padding:0 0 28px;}
-  .dimensions-heading h3{font-size:2rem;}
-  .dimensions-grid{grid-template-columns:1fr 1fr;}
-  .dimension-group{min-height:115px;padding:15px;}
-  .dimension-group-head{margin-bottom:19px;}
-  .dimension-group-head h4{font-size:.4rem;}
-  .dimension-values p{font-size:.61rem;}
+  .residences-intro-bottom p{font-size:.85rem;line-height:1.7;}
+  .residence-plans{width:100%;margin-top:0;}
+  .residence-plan,.residence-plan.reverse{display:block;width:100%;min-height:0;border-top:1px solid rgba(255,255,255,.08);}
+  .residence-plan-media,.residence-plan.reverse .residence-plan-media{display:block;position:relative;order:initial;width:100%;height:auto;min-height:0;aspect-ratio:4/3;overflow:hidden;cursor:default;touch-action:auto;}
+  .residence-plan-image{position:absolute;inset:0;width:100%;height:100%;padding:0;}
+  .residence-plan-image img{width:100%;height:100%;object-fit:contain;object-position:center;transform:none!important;filter:none!important;transition:none;will-change:auto;}
+  .residence-plan-media:hover .residence-plan-image img,.residence-plan-media.is-zoomed .residence-plan-image img{transform:none!important;filter:none!important;}
+  .residence-media-shade,.residence-media-top,.residence-media-bottom,.residence-media-frame,.residence-zoom-hint,.residence-plan-content{display:none!important;}
+  .residence-plan.reverse .residence-plan-media{order:initial;}
+  .residence-dimensions{display:block;margin:0;padding:55px 20px 65px;}
+  .dimensions-heading{padding:0 0 25px;text-align:center;}
+  .dimensions-heading .eyebrow{margin:0 0 12px;}
+  .dimensions-heading h3{max-width:none;font-size:2rem;}
+  .dimensions-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .dimension-group{min-height:115px;padding:14px;}
+  .dimension-group-head{margin-bottom:15px;}
+  .dimension-group-head h4{font-size:.75rem;letter-spacing:.08em;}
+  .dimension-values p{font-size:.85rem;line-height:1.4;}
 }
+
+/* SMALL MOBILE */
 @media(max-width:430px){
-  .residences-intro h2{font-size:2.1rem;}
-  .residence-plan-media{height:290px;min-height:290px;}
-  .residence-plan-content{min-height:330px;padding:43px 18px;}
-  .residence-plan-content h3{font-size:1.85rem;}
-    .dimensions-heading{padding-top:0}
-  .dimensions-heading .eyebrow{margin:0 0 12px;font-size:1rem ; text-align: center;}
-  .dimensions-heading h3{max-width:420px;margin:0;font-size:1.8rem;line-height:1.08;text-align: center;}
-  .dimensions-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;border-top:1px solid var(--hairline);border-left:1px solid var(--hairline)}
-  .dimension-group{min-height:105px;padding:13px 11px;border-right:1px solid var(--hairline);border-bottom:1px solid var(--hairline)}
-  .dimension-group-head{margin-bottom:10px}
-  .dimension-group-head span{font-size:1rem}
-  .dimension-group-head h4{font-size:.78rem;letter-spacing:.08em}
-  .dimension-values{gap:4px}
-  .dimension-values p{font-size:1rem;line-height:1.4}
-  .residence-plan-description{font-size:1rem;}
-  .residence-plan-meta{flex-direction:column;align-items:flex-start;gap:6px;}
-  .residence-content-number{font-size:4rem;}
+  .residences-intro{padding:0 18px;}
+  .residences-intro h2{font-size:2rem;}
+  .residence-plan-media,.residence-plan.reverse .residence-plan-media{aspect-ratio:1/1;}
   .residence-dimensions{padding-left:18px;padding-right:18px;}
   .dimensions-grid{grid-template-columns:1fr;}
+  .dimension-group{min-height:105px;padding:13px 11px;}
+  .dimension-group-head{margin-bottom:10px;}
+  .dimension-group-head h4{font-size:.78rem;}
+  .dimension-values p{font-size:.9rem;}
 }
-@media(prefers-reduced-motion:reduce){
-  .residence-plan-image img,.residence-media-frame,.residence-content-number,.residence-content-line,.residence-content-arrow,.residence-zoom-hint{transition:none;}
-  .residence-plan-media img,.residence-media-frame,.residence-content-number,.residence-content-line,.residence-content-arrow,.dimension-group,.vastu-card,.vastu-card:after,.vastu-card-arrow{transition:none;}
-}
-@media(max-width:700px){
-  .residences-intro h2{font-size:2.2rem;white-space:normal;}
-}
-@media(max-width:430px){
-@media(max-width:700px){
-    .residences-intro h2{font-size:2.2rem;white-space:normal;}
-  }
-  }
 
+/* REDUCED MOTION */
+@media(prefers-reduced-motion:reduce){
+  .residence-plan-image img,.residence-media-frame,.residence-content-number,.residence-content-line,.residence-content-arrow,.residence-zoom-hint,.dimension-group{transition:none;}
+}
 /* ===================== VASTU ===================== */
 @media (max-width: 560px){
   .vastu-section{margin-top:65px;}
