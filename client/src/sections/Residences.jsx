@@ -46,6 +46,13 @@ const handleTouchStart = (e) => {
   e.currentTarget.dataset.touchY = touch.clientY;
 };
 
+const handleMouseLeave = (e) => {
+  const media = e.currentTarget;
+
+  media.style.setProperty('--zoom-x', '50%');
+  media.style.setProperty('--zoom-y', '50%');
+  media.classList.remove('is-zoomed');
+};
 const handleTouchEnd = (e) => {
   const media = e.currentTarget;
   const touch = e.changedTouches[0];
