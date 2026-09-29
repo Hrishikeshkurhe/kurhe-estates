@@ -46,6 +46,18 @@ export default function Residences() {
     media.style.setProperty('--zoom-x', '50%');
     media.style.setProperty('--zoom-y', '50%');
   };
+  const handleTouchZoom = (e) => {
+  const media = e.currentTarget;
+  const touch = e.touches[0];
+  const rect = media.getBoundingClientRect();
+
+  const x = ((touch.clientX - rect.left) / rect.width) * 100;
+  const y = ((touch.clientY - rect.top) / rect.height) * 100;
+
+  media.style.setProperty('--zoom-x', `${x}%`);
+  media.style.setProperty('--zoom-y', `${y}%`);
+  media.classList.toggle('is-zoomed');
+};
 
   return (
     <section className="residences-section" id="residences">
@@ -91,6 +103,7 @@ export default function Residences() {
           className="residence-plan-media"
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
+          onTouchStart={handleTouchZoom}
         >
           <div className="residence-plan-image">
             <img
