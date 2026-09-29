@@ -30,7 +30,7 @@ export default function AboutInfinia() {
       <div className={`infinia-about-content ${copyClass}`} ref={copyRef}>
 
         <div className="infinia-about-header">
-          <p className="eyebrow">01 — The Address</p>
+          <p className="eyebrow">01 - The Address</p>
           <span className="infinia-about-number">01</span>
         </div>
 
@@ -45,24 +45,21 @@ export default function AboutInfinia() {
         <p className="infinia-about-lead">
           Experience a world where architecture becomes art and comfort
           becomes a way of life. Infinia sets a new benchmark for modern
-          luxury in Amravati — an exceptional blend of style, space and
+          luxury in Amravati - an exceptional blend of style, space and
           prestige.
         </p>
+<div className="infinia-highlights">
+  {HIGHLIGHTS.map(([value, label], index) => (
+    <div className="infinia-highlight" key={label}>
+      {/* <span className="highlight-index">0{index + 1}</span> */}
 
-        <div className="infinia-highlights">
-          {HIGHLIGHTS.map(([value, label], index) => (
-            <div className="infinia-highlight" key={label}>
-              <span className="highlight-index">0{index + 1}</span>
-
-              <div className="highlight-main">
-                <strong>{value}</strong>
-                <span>{label}</span>
-              </div>
-
-              <div className="highlight-line"></div>
-            </div>
-          ))}
-        </div>
+      <div className="highlight-main">
+        <strong>{value}</strong>
+        <span>{label}</span>
+      </div>
+    </div>
+  ))}
+</div>
 
       </div>
 

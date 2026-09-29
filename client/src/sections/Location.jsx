@@ -20,7 +20,7 @@ export default function Location() {
       </div>
 
       <div className={`split-copy ${copyClass}`} ref={copyRef}>
-        <p className="eyebrow">06 — Location</p>
+        <p className="eyebrow">06 - Location</p>
 
         <h2>
           Plot No. 8,
@@ -29,7 +29,7 @@ export default function Location() {
         </h2>
 
         <p>
-          Near Jagadare Layout, Amravati 444604 — inside a settled
+          Near Jagadare Layout, Amravati 444604 - inside a settled
           residential pocket, minutes from schools, hospitals and the
           city's daily rhythm.
         </p>

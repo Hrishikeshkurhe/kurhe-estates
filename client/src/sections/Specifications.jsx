@@ -9,7 +9,7 @@ export default function Specifications() {
     <section className="section specifications-section" id="specifications">
 
       <div className="specifications-heading">
-        <p className="eyebrow">03 — Specifications</p>
+        <p className="eyebrow">03 - Specifications</p>
 
         <h2>Detail is the real luxury</h2>
 

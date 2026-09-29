@@ -35,7 +35,7 @@ export default function Video() {
       <div className="video-hero">
 
         <div className="video-header">
-          <p className="eyebrow">06 — Infinia</p>
+          <p className="eyebrow">06 - Infinia</p>
 
           <h1>
             Experience

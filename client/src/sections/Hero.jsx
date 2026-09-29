@@ -35,7 +35,7 @@ export default function Hero() {
       <div className="hero-modern-media">
         <img
           src="/assets/hero-cover.jpg"
-          alt="Infinia — The New Standard of Imperial Living"
+          alt="Infinia - The New Standard of Imperial Living"
         />
         <div className="hero-modern-overlay"></div>
         <div className="hero-modern-glow"></div>
@@ -81,10 +81,10 @@ export default function Hero() {
         </div>
 
         <div className="hero-modern-bottom">
-          <div className="hero-modern-copy">
+          <div className="hero-modern-copy ">
             <p>
               Crafting landmarks. Creating legacies.
-              A boutique address of SIX 3 BHK residences in Amravati —
+              A boutique address of SIX 3 BHK residences in Amravati -
               Vastu-aligned, thoughtfully designed, and built for generations
               to call home.
             </p>

@@ -34,7 +34,7 @@ export default function Contact() {
       });
 
       setNote(
-        'Thank you — our booking desk will call you back shortly.'
+        'Thank you - our booking desk will call you back shortly.'
       );
 
       setForm({
@@ -268,7 +268,7 @@ export default function Contact() {
           </form>
 
           <div className="form-footer">
-            <span>INFINIA — AMRAVATI</span>
+            <span>INFINIA - AMRAVATI</span>
             <span>PRIVATE RESIDENCES</span>
           </div>
         </div>

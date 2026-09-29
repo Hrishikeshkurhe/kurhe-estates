@@ -19,11 +19,11 @@ const infinia = {
   structure: 'G + 6',
   flatNumbers: ['101', '201', '301', '401', '501', '601'],
   vastuZones: [
-    { direction: 'NE', name: 'Ishanya Corner', room: 'Puja Room', element: '—', description: 'Aligned with the sacred north-east zone for peace, positivity & divine blessings.' },
+    { direction: 'NE', name: 'Ishanya Corner', room: 'Puja Room', element: '-', description: 'Aligned with the sacred north-east zone for peace, positivity & divine blessings.' },
     { direction: 'N', name: 'North Entrance', room: 'Entrance', element: 'Wealth & Opportunity', description: 'The gateway to prosperity, welcoming career growth & dynamic abundance.' },
     { direction: 'N', name: 'North Zone', room: 'Guest Room', element: 'Wealth & Opportunity', description: 'Designed to encourage financial growth, focus & positive energy.' },
     { direction: 'NW', name: 'Vayavya', room: 'Kids Bedroom', element: 'Air', description: 'Promotes dynamic energy, social success & continuous movement.' },
-    { direction: 'SE', name: 'Agneya', room: 'Kitchen', element: 'Fire', description: 'Auspicious kitchen — supports health, vigor & nourishing energy.' },
+    { direction: 'SE', name: 'Agneya', room: 'Kitchen', element: 'Fire', description: 'Auspicious kitchen - supports health, vigor & nourishing energy.' },
     { direction: 'C', name: 'Brahmasthan', room: 'Family Gathering', element: 'Free-Flowing Energy', description: 'Open core diffusing positive energy for family unity & social bonding.' },
     { direction: 'SW', name: 'Nairutya', room: "Master's Retreat", element: 'Earth', description: 'Grounded stability, leadership & deep restorative sleep.' },
   ],

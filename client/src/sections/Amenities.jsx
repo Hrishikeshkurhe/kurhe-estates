@@ -9,7 +9,7 @@ export default function Amenities() {
   return (
     <section className={`amenities ${headClass}`} id="amenities">
       <div className="amenities-heading" ref={headRef}>
-        <p className="eyebrow">04 — Amenities</p>
+        <p className="eyebrow">04 - Amenities</p>
         {/* <h2>Everyday, elevated</h2> */}
        <span className="amenities-heading-line"></span>
 

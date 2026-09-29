@@ -19,7 +19,7 @@ const RESIDENCE_PLANS = [
     title: 'A home designed in 1375 sq.ft area',
     description: 'The cut section gives a clear view of the residence planning and vertical organization, showcasing how each 3 BHK home is thoughtfully arranged for comfortable everyday living.',
     img: '/assets/floorplan-cutsection.jpg',
-    alt: '3 BHK cut section — flat no. 101 to 601'
+    alt: '3 BHK cut section - flat no. 101 to 601'
   }
 ];
 
@@ -55,7 +55,7 @@ export default function Residences() {
       <div className={`residences-intro ${headClass}`} ref={headRef}>
 
         <div className="residences-intro-top">
-          <p className="eyebrow">02 — The Residences</p>
+          <p className="eyebrow">02 - The Residences</p>
           <span className="residences-intro-index">INFINIA / 02</span>
         </div>
 
@@ -68,7 +68,7 @@ export default function Residences() {
 
           <p>
             Every Infinia residence is oriented to the eight energies of Vastu
-            Shastra — thoughtfully planned around light, privacy, movement and
+            Shastra - thoughtfully planned around light, privacy, movement and
             everyday living.
           </p>
         </div>
@@ -78,107 +78,144 @@ export default function Residences() {
 
       {/* ==================== FLOOR PLANS ==================== */}
 
-      <div
-        className={`residence-plans ${plansClass}`}
-        ref={plansRef}
+   <div className={`residence-plans ${plansClass}`} ref={plansRef}>
+
+  {RESIDENCE_PLANS.map((plan, index) => (
+    <React.Fragment key={plan.key}>
+
+      <article
+        className={`residence-plan ${index % 2 !== 0 ? 'reverse' : ''}`}
       >
 
-        {RESIDENCE_PLANS.map((plan, index) => (
+        <div
+          className="residence-plan-media"
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+        >
+          <div className="residence-plan-image">
+            <img
+              src={plan.img}
+              alt={plan.alt}
+              loading="lazy"
+            />
+          </div>
 
-          <article
-            className={`residence-plan ${index % 2 !== 0 ? 'reverse' : ''}`}
-            key={plan.key}
+          <div className="residence-media-shade"></div>
+
+          <div className="residence-media-top">
+            <span>{plan.number}</span>
+            <span>INFINIA</span>
+          </div>
+
+          <div className="residence-media-bottom">
+            <span>ARCHITECTURAL PLAN</span>
+            <span>MOVE TO EXPLORE ↗</span>
+          </div>
+
+          <div className="residence-media-frame"></div>
+
+          <div className="residence-zoom-hint">
+            <span>MOVE TO EXPLORE</span>
+            <strong>↗</strong>
+          </div>
+        </div>
+
+        <div className="residence-plan-content">
+
+          <div className="residence-content-number">
+            {plan.number}
+          </div>
+
+          <p className="residence-plan-label">
+            {plan.label}
+          </p>
+
+          <h3>{plan.title}</h3>
+
+          <div className="residence-content-line"></div>
+
+          <p className="residence-plan-description">
+            {plan.description}
+          </p>
+
+          <div className="residence-plan-meta">
+            <span>INFINIA</span>
+            <span>3 BHK RESIDENCES</span>
+          </div>
+
+          <div className="residence-content-arrow">
+            ↗
+          </div>
+
+        </div>
+
+      </article>
+
+
+      {/* VASTU AFTER FIRST FLOOR PLAN */}
+
+      {index === 0 && (
+        <div className="vastu-section">
+
+          <div className="vastu-heading">
+
+            <div>
+              <p className="eyebrow">
+                Vastu Planning
+              </p>
+
+              <h2>
+                Designed in harmony <em>with Vastu.</em>
+              </h2>
+            </div>
+
+          </div>
+
+          <div
+            className={`vastu-grid ${vastuClass}`}
+            ref={vastuRef}
           >
 
-            {/* FLOOR PLAN IMAGE */}
+            {infinia.vastuZones.map((zone, zoneIndex) => (
 
-            <div
-              className="residence-plan-media"
-              onMouseMove={handleMouseMove}
-              onMouseLeave={handleMouseLeave}
-            >
+              <div
+                className="vastu-card"
+                key={zone.name}
+              >
 
-              <div className="residence-plan-image">
+                <div className="vastu-card-top">
+                  <span>
+                    {String(zoneIndex + 1).padStart(2, '0')}
+                  </span>
 
-                <img
-                  src={plan.img}
-                  alt={plan.alt}
-                  loading="lazy"
-                />
+                  <strong>
+                    {zone.dir}
+                  </strong>
+                </div>
+
+                <div className="vastu-card-body">
+                  <h4>{zone.name}</h4>
+
+                  <p>{zone.desc}</p>
+                </div>
+
+                <span className="vastu-card-arrow">
+                  ↗
+                </span>
 
               </div>
 
+            ))}
 
-              <div className="residence-media-shade"></div>
+          </div>
 
+        </div>
+      )}
 
-              <div className="residence-media-top">
-                <span>{plan.number}</span>
-                <span>INFINIA</span>
-              </div>
+    </React.Fragment>
+  ))}
 
-
-              <div className="residence-media-bottom">
-                <span>ARCHITECTURAL PLAN</span>
-                <span>MOVE TO EXPLORE ↗</span>
-              </div>
-
-
-              <div className="residence-media-frame"></div>
-
-
-              <div className="residence-zoom-hint">
-                <span>MOVE TO EXPLORE</span>
-                <strong>↗</strong>
-              </div>
-
-            </div>
-
-
-            {/* CONTENT */}
-
-            <div className="residence-plan-content">
-
-              <div className="residence-content-number">
-                {plan.number}
-              </div>
-
-
-              <p className="residence-plan-label">
-                {plan.label}
-              </p>
-
-
-              <h3>
-                {plan.title}
-              </h3>
-
-
-              <div className="residence-content-line"></div>
-
-
-              <p className="residence-plan-description">
-                {plan.description}
-              </p>
-
-
-              <div className="residence-plan-meta">
-                <span>INFINIA</span>
-                <span>3 BHK RESIDENCES</span>
-              </div>
-
-
-              <div className="residence-content-arrow">
-                ↗
-              </div>
-
-            </div>
-
-          </article>
-
-        ))}
-
-      </div>
+</div>
 
 
       {/* ==================== TECHNICAL OVERVIEW ==================== */}
@@ -244,74 +281,7 @@ export default function Residences() {
 
       {/* ==================== VASTU ==================== */}
 
-      <div className="vastu-section">
-
-        <div className="vastu-heading">
-
-          <div>
-
-            <p className="eyebrow">
-              Vastu Planning
-            </p>
-
-            <h2>
-              Designed in harmony <em>with Vastu.</em>
-            </h2>
-
-          </div>
-
-        </div>
-
-
-        <div
-          className={`vastu-grid ${vastuClass}`}
-          ref={vastuRef}
-        >
-
-          {infinia.vastuZones.map((zone, index) => (
-
-            <div
-              className="vastu-card"
-              key={zone.name}
-            >
-
-              <div className="vastu-card-top">
-
-                <span>
-                  {String(index + 1).padStart(2, '0')}
-                </span>
-
-                <strong>
-                  {zone.dir}
-                </strong>
-
-              </div>
-
-
-              <div className="vastu-card-body">
-
-                <h4>
-                  {zone.name}
-                </h4>
-
-                <p>
-                  {zone.desc}
-                </p>
-
-              </div>
-
-
-              <span className="vastu-card-arrow">
-                ↗
-              </span>
-
-            </div>
-
-          ))}
-
-        </div>
-
-      </div>
+    
 
     </section>
   );
