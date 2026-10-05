@@ -30,17 +30,23 @@ export default function Footer() {
         {/* MIDDLE */}
         <div className="footer-middle">
 
-          <div className="footer-column">
-            <span className="footer-label">
-              Kurhe Estates
-            </span>
+         <div className="footer-column">
+  <span className="footer-label">
+    Kurhe Estates
+  </span>
 
-            <p>
-              A boutique real estate company
-              creating refined spaces and
-              timeless addresses.
-            </p>
-          </div>
+<p> 
+  Creating distinctive spaces
+  for elevated living.
+</p>
+
+<p className="footer-description">
+  Every detail is considered to bring together
+  architecture, comfort and timeless design.
+</p>
+
+
+</div>
 
 
           <div className="footer-column">

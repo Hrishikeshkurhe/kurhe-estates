@@ -63,7 +63,7 @@ export default function Hero() {
       <div className="hero-modern-content">
         <div className="hero-modern-kicker">
           <span></span>
-          A Growing Real Estate Company in Vidarbha
+         Raising the Standard of Living in Vidarbha.
         </div>
         
 
