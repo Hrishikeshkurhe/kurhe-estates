@@ -1020,10 +1020,8 @@ h4{font-size:var(--heading-sm);}
 
 .highlight-main{display:flex;flex-direction:column;gap:5px;margin-top:auto;min-width:0}
 
-.highlight-main strong{font-family:var(--serif);font-size:1.9rem;font-weight:400;line-height:1.05;color:var(--ivory);letter-spacing:-.025em}
-
-.highlight-main span{font-family:var(--mono);font-size:.85rem;line-height:1.5;letter-spacing:.1em;text-transform:uppercase;color:var(--stone);max-width:190px}
-
+.highlight-main strong{font-family:var(--sans);font-size:1.85rem;font-weight:400;line-height:1.05;letter-spacing:-.02em;}
+.highlight-main span{font-family:var(--sans);font-size:.88rem;font-weight:400;line-height:1.5;letter-spacing:.08em;text-transform:uppercase;}
 .infinia-highlight:hover .highlight-main strong{color:var(--gold-bright)}
 .infinia-highlight:hover .highlight-main strong{color:var(--gold-bright);}
 @media(max-width:1000px){
