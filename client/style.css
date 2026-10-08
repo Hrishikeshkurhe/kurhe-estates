@@ -1196,3 +1196,141 @@ h4{font-size:var(--heading-sm);}
     bottom:22px;
   }
 }
+
+/* =========================================================
+   FINAL DESKTOP SIZE FIX
+   Mobile is NOT affected
+   ========================================================= */
+
+@media (min-width:1101px){
+
+  html{
+    font-size:14px;
+  }
+
+  body{
+    font-size:14px;
+  }
+
+  /* ---------- NAVBAR ---------- */
+
+  .nav{
+    padding:16px 0;
+  }
+
+  .nav.scrolled{
+    padding:9px 0;
+  }
+
+  .nav-inner{
+    width:min(1200px,calc(100% - 80px));
+  }
+
+  .nav-logo{
+    width:200px;
+    height:50px;
+  }
+
+  .nav.scrolled .nav-logo{
+    width:175px;
+    height:44px;
+  }
+
+  .nav-links{
+    font-size:.9rem;
+  }
+
+  .nav-links-inner{
+    gap:27px;
+  }
+
+  .nav-links a{
+    font-size:.9rem;
+    padding:8px 0;
+  }
+
+  .nav-cta{
+    padding:8px 13px !important;
+    gap:10px !important;
+  }
+
+  .nav-cta strong{
+    font-size:.78rem;
+  }
+
+
+  /* ---------- HERO ---------- */
+
+  .hero-modern-content{
+    width:min(1120px,calc(100% - 120px));
+  }
+
+  .hero-infinia{
+    font-size:clamp(4.8rem,9vw,8rem);
+  }
+
+  .hero-standard{
+    font-size:clamp(1.3rem,2.2vw,2rem);
+  }
+
+
+  /* ---------- SECTION HEADINGS ---------- */
+
+  .infinia-about-content h2{
+    font-size:clamp(2.2rem,3.2vw,3.3rem);
+  }
+
+  .residences-intro h2{
+    font-size:clamp(2.4rem,3.2vw,3.3rem);
+  }
+
+  .vastu-heading h2{
+    font-size:clamp(2.3rem,3.2vw,3.2rem);
+  }
+
+  .amenities-intro{
+    font-size:clamp(1.7rem,2.2vw,2.35rem);
+  }
+
+
+  /* ---------- VIDEO ---------- */
+
+  .video-hero{
+    padding:70px 35px 80px;
+  }
+
+  .video-header{
+    margin-bottom:35px;
+  }
+
+  .video-header h1{
+    font-size:clamp(2.5rem,4vw,3.7rem);
+  }
+
+  .video-intro{
+    font-size:1rem;
+  }
+
+  .video-frame{
+    width:min(1100px,100%);
+  }
+
+
+  /* ---------- LOCATION ---------- */
+
+  .split-copy h2{
+    font-size:clamp(2rem,2.8vw,3rem);
+  }
+
+  .split-copy > p:not(.eyebrow){
+    font-size:1rem;
+  }
+
+
+  /* ---------- CONTACT ---------- */
+
+  .contact-copy h2{
+    font-size:clamp(2.8rem,4.5vw,4.5rem);
+  }
+
+}
