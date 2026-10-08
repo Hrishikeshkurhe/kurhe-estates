@@ -1245,8 +1245,8 @@ h4{font-size:var(--heading-sm);}
   }
 
   .nav-links a{
-    font-size:.9rem;
-    padding:8px 0;
+    font-size:1.2rem;
+    padding:10px 10px 5px 10px;
   }
 
   .nav-cta{
