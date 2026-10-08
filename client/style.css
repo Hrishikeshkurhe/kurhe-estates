@@ -1099,3 +1099,30 @@ h4{font-size:var(--heading-sm);}
 .video-header h1{font-size:2.6rem}
 .video-intro{font-size:.74rem}
 }
+
+@media (max-width: 700px) {
+  .amenities-main {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .amenities-visual {
+    display: block !important;
+    width: 100% !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    padding-bottom: 141.4% !important;
+    flex: 0 0 auto !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  .amenities-list {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    flex: 0 0 auto !important;
+  }
+}
