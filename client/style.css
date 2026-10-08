@@ -1100,29 +1100,95 @@ h4{font-size:var(--heading-sm);}
 .video-intro{font-size:.74rem}
 }
 
-@media (max-width: 700px) {
-  .amenities-main {
-    display: flex !important;
-    flex-direction: column !important;
-    width: 100% !important;
-    height: auto !important;
+/* =========================================================
+   FINAL AMENITIES FIX
+   ========================================================= */
+
+.amenities-main{
+  display:grid !important;
+  grid-template-columns:55% 45% !important;
+  width:100% !important;
+  height:auto !important;
+  min-height:0 !important;
+}
+
+.amenities-visual{
+  position:relative !important;
+  display:block !important;
+  width:100% !important;
+  height:360px !important;
+  min-height:360px !important;
+  overflow:hidden !important;
+  flex:none !important;
+}
+
+.amenities-visual img{
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  max-width:none !important;
+  object-fit:cover !important;
+  object-position:center !important;
+}
+
+.amenities-list{
+  width:100% !important;
+  height:auto !important;
+  min-height:0 !important;
+  box-sizing:border-box !important;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width:600px){
+
+  .amenities-main{
+    display:flex !important;
+    flex-direction:column !important;
+    width:100% !important;
+    height:auto !important;
   }
 
-  .amenities-visual {
-    display: block !important;
-    width: 100% !important;
-    height: 0 !important;
-    min-height: 0 !important;
-    padding-bottom: 141.4% !important;
-    flex: 0 0 auto !important;
-    overflow: hidden !important;
-    box-sizing: border-box !important;
+  .amenities-visual{
+    position:relative !important;
+    display:block !important;
+    width:100% !important;
+
+    /* IMPORTANT:
+       141.4vw gives approximately
+       556px at 393px viewport width */
+    height:141.4vw !important;
+    min-height:141.4vw !important;
+
+    flex:none !important;
+    overflow:hidden !important;
   }
 
-  .amenities-list {
-    width: 100% !important;
-    height: auto !important;
-    min-height: 0 !important;
-    flex: 0 0 auto !important;
+  .amenities-visual img{
+    display:block !important;
+    width:100% !important;
+    height:100% !important;
+    max-width:none !important;
+    object-fit:cover !important;
+    object-position:center !important;
+  }
+
+  .amenities-list{
+    display:flex !important;
+    flex-direction:column !important;
+    width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+    padding:25px 22px 24px !important;
+    box-sizing:border-box !important;
+  }
+
+  .amenities-overlay{
+    left:22px !important;
+    right:22px !important;
+    bottom:22px !important;
   }
 }
