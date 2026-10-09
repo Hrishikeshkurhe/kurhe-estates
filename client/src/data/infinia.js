@@ -37,7 +37,7 @@ credits: [
   ['Founder', 'Mr. Rudresh Kurhe'],
   ['Architect / Engineer', 'Ar. Girish Nagpure'],
   ['Legal Advisor', 'Adv. Vaibhav Kakarde'],
-  ['Digital Developer', 'Mr. Hrishikesh Kurhe'],
+  ['Web Developer', 'Mr. Hrishikesh Kurhe'],
   ['Banking Partners', 'HDFC Bank · Axis Bank · SBI Bank'],
 ],
 };
