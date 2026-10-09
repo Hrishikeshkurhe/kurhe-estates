@@ -1347,10 +1347,10 @@ section[id] {
 .credit:last-child { border-right: 0; }
 .credit:hover { background: rgba(255, 255, 255, 0.018); }
 .credit-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; }
-.credit-top span:first-child { color: var(--gold); font-family: var(--mono); font-size: 0.45rem; letter-spacing: 0.12em; }
-.credit-top span:last-child { color: var(--stone); font-family: var(--mono); font-size: 0.36rem; letter-spacing: 0.12em; opacity: 0.4; }
-.credit-content h5 { margin: 0 0 4px; color: var(--ivory); font-size: 1.15rem; line-height: 1.15; white-space: nowrap; }
-.credit-content p { margin: 0; overflow: hidden; color: var(--stone); font-size: 0.76rem; line-height: 1.4; text-overflow: ellipsis; white-space: nowrap; }
+.credit-top span:first-child { color: var(--gold); font-family: var(--mono); font-size: 0.85rem; letter-spacing: 0.12em;}
+.credit-top span:last-child { color: var(--stone); font-family: var(--mono); font-size: 0.76rem; letter-spacing: 0.12em; opacity: 0.4; }
+.credit-content h5 { margin: 0 0 4px; color: var(--ivory); font-size: 1rem; line-height: 1.15; white-space: nowrap; text-align: center; }
+.credit-content p { margin: 0; overflow: hidden; color: var(--stone); font-size: 1.25rem; line-height: 1.4; text-overflow: ellipsis; white-space: nowrap; text-align: center;}
 .credit-arrow { position: absolute; right: 16px; bottom: 13px; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--hairline); border-radius: 50%; color: var(--gold); font-size: 0.42rem; opacity: 0.45; transition: all 0.3s ease; }
 .credit:hover .credit-arrow { color: var(--ink); background: var(--gold); opacity: 1; transform: rotate(45deg); }
 .credit::after { content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 1px; background: var(--gold); transition: width 0.35s ease; }
