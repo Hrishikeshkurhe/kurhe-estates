@@ -21,8 +21,8 @@ export default function Credits() {
         {infinia.credits.map(([h, p], index) => (
           <div className="credit" key={h}>
             <div className="credit-top">
-              <span>0{index + 1}</span>
-              <span>INFINIA</span>
+              {/* <span>0{index + 1}</span>
+              <span>INFINIA</span> */}
             </div>
 
             <div className="credit-content">
