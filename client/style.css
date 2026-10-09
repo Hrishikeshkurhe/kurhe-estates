@@ -255,8 +255,8 @@ section[id] {
 
 .nav-logo {
   display: block;
-  width: 195px;
-  height: 48px;
+  width: 250px;
+  height: 60px;
   object-fit: contain;
   object-position: left center;
   transition: width 0.35s ease, height 0.35s ease, transform 0.3s ease, opacity 0.3s ease;
@@ -264,7 +264,7 @@ section[id] {
 
 .nav.scrolled .nav-logo {
   width: 180px;
-  height: 45px;
+  height: 55px;
 }
 
 .nav-brand:hover .nav-logo {
@@ -1178,6 +1178,8 @@ section[id] {
   .dimension-group { min-height: 100px; }
   .vastu-grid { width: calc(100% - 36px); grid-template-columns: 1fr; }
   .vastu-card { min-height: 145px; }
+
+  
 }
 
 /* =========================================================
@@ -1276,7 +1278,7 @@ section[id] {
 .video-header h1 em { color: var(--gold-bright); font-style: italic; }
 .video-intro { max-width: 650px; margin: 17px auto 0; font-size: 0.86rem; line-height: 1.7; }
 .video-frame { position: relative; width: min(1120px, 100%); margin: 0 auto; overflow: hidden; border: 1px solid var(--hairline); background: #050505; box-shadow: 0 25px 70px rgba(0, 0, 0, 0.28); }
-.video-frame video { width: 100%; height: auto; max-height: 630px; object-fit: contain; background: #050505; }
+.video-frame video { width: 100%; height: auto; max-height: 530px; object-fit: contain; background: #050505; }
 
 @media (max-width: 700px) {
   .video-hero { padding: 54px 18px 60px; }
