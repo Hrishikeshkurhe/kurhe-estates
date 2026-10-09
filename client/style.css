@@ -1055,18 +1055,18 @@ section[id] {
 .residence-content-arrow { position: absolute; right: 34px; bottom: 30px; width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255, 255, 255, 0.14); border-radius: 50%; color: var(--gold); font-size: 0.72rem; opacity: 0.7; transition: background 0.3s ease, color 0.3s ease, transform 0.35s ease, opacity 0.3s ease; }
 .residence-plan:hover .residence-content-arrow { color: #090807; background: var(--gold); transform: rotate(45deg); opacity: 1; }
 
-.residence-dimensions { display: grid; grid-template-columns: 220px 1fr; gap: 40px; width: min(1160px, 100%); margin: 0 auto; padding: 50px 28px 5px; }
+.residence-dimensions { display: grid; grid-template-columns: 220px 1fr; gap: 40px; width: min(1160px, 100%); margin: 0 auto; padding:25px 28px 5px; }
 .dimensions-heading { padding-top: 4px; }
 .dimensions-heading .eyebrow { margin-bottom: 12px; }
 .dimensions-heading h3 { max-width: 220px; margin: 0; font-size: 1.75rem; line-height: 1.08; }
 .dimensions-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--hairline); border-left: 1px solid var(--hairline); }
 .dimension-group { min-height: 118px; padding: 15px; border-right: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); transition: background 0.3s ease; }
 .dimension-group:hover { background: rgba(255, 255, 255, 0.025); }
-.dimension-group-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 17px; }
-.dimension-group-head span { color: var(--gold); font-family: var(--mono); font-size: 0.7rem; }
-.dimension-group-head h4 { margin: 0; color: var(--ivory); font-family: var(--mono); font-size: 0.6rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; }
-.dimension-values { display: flex; flex-direction: column; gap: 4px; }
-.dimension-values p { margin: 0; color: var(--stone); font-size: 0.72rem; line-height: 1.45; }
+.dimension-group-head { display: flex; align-items: center; justify-content: flex-start; gap: 14px; text-align: left; }
+.dimension-group-head span { color: var(--gold); font-family: var(--mono); font-size: 0.65rem; text-align: left; }
+.dimension-group-head h4 { margin: 10px; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; text-align: left; }
+.dimension-values { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; text-align: left; }
+.dimension-values p { width: 100%; margin: 0; color: var(--stone); font-size: 0.92rem; line-height: 1.45; text-align: left; }
 
 /* VASTU */
 .vastu-section { width: 100%; margin-top: 72px; padding: 58px 0 68px; border-top: 1px solid var(--hairline); background: var(--charcoal); }
